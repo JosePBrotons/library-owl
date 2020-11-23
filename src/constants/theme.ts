@@ -6,6 +6,10 @@ export const COLORS = {
     white: 'rgba(255, 255, 255, 1)',
     whiteTwo: 'rgba(248, 248, 248, 1)',
     gray: 'rgba(106, 106, 106, 1)',
+    lightGray: 'rgba(233, 233, 233, 1)',
+    lighterGray: 'rgba(69, 69, 69, 0.5)',
+    darkGray: 'rgba(69, 69, 69, 1)',
+    blue: 'rgba(57, 172, 233, 1)',
 };
 export const SIZES = {
     base: 8,
