@@ -1,3 +1,8 @@
 {
-    "global": {}
+    "global": {
+        "login": "Inicio de sesión",
+        "library": "Biblioteca",
+        "detail": "Detalle del libro",
+        "settings": "Ajustes"
+    }
 }
