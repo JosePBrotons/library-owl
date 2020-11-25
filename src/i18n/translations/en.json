@@ -1,0 +1,8 @@
+{
+    "global": {
+        "login": "Login",
+        "library": "Library",
+        "detail": "Book Detail",
+        "settings": "Settings"
+    }
+}
