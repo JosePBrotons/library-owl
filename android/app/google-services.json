@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "936027130991",
+    "firebase_url": "https://library-owl.firebaseio.com",
+    "project_id": "library-owl",
+    "storage_bucket": "library-owl.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936027130991:android:e78e72c9ef14bd9fe2919a",
+        "android_client_info": {
+          "package_name": "com.wolox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936027130991-p1ej8susf6hv5kclg9j5kn09it67j1e1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2bJEOVPA8a3AyU4yGUPw-jsev1fIfTPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "936027130991-p1ej8susf6hv5kclg9j5kn09it67j1e1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
