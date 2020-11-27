@@ -6,7 +6,7 @@ test('renders button component correctly', () => {
     const props = {
         text: 'Sign In',
         disabled: false,
-        onPress: jest.fn
+        onPress: jest.fn,
     };
     const btnCmp = renderer.create(<Button {...props} />).toJSON();
     expect(btnCmp).toMatchSnapshot();

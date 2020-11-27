@@ -1,3 +1,5 @@
 import theme, { COLORS } from './theme';
 
-export { theme, COLORS };
+const emailRegExp: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+
+export { theme, COLORS, emailRegExp };
