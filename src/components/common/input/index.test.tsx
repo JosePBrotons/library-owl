@@ -9,7 +9,7 @@ test('renders input component correctly', () => {
         value: 'me@josepbrotons.com',
         placeholderTextColor: COLORS.lightGray,
         onChangeText: jest.fn,
-        iconName: 'email',
+        iconName: 'mail-reply',
     };
     const inputCmp = renderer.create(<Input {...props} />).toJSON();
     expect(inputCmp).toMatchSnapshot();

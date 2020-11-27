@@ -1,27 +1,32 @@
 import { StyleSheet } from 'react-native';
-import { theme } from './../../../constants/index';
+import { theme } from '../../../constants';
 
 const { COLORS, FONTS } = theme;
 
 export const styles = StyleSheet.create({
-    inputView: {
+    container: {
         width: '80%',
         backgroundColor: COLORS.whiteTwo,
         borderRadius: 5,
         height: 40,
-        marginBottom: 20,
+        marginBottom: 10,
         flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: 10,
         color: COLORS.darkGray,
     },
-    inputText: {
+    hidden: {
+        height: 40
+    },
+    expanded: {
+        height: 115
+    },
+    label: {
         ...FONTS.body4,
+        color: COLORS.blue,
         paddingLeft: 8,
-        flex: 1,
-        color: COLORS.darkGray,
     },
-    icon: {
-        ...FONTS.body3,
-    },
+    ages: {
+        marginVertical: 8
+    }
 });

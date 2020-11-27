@@ -34,7 +34,7 @@ exports[`renders input component correctly 1`] = `
       ]
     }
   >
-    ?
+    
   </Text>
   <TextInput
     allowFontScaling={true}

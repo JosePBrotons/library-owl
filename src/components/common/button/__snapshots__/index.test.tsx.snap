@@ -35,7 +35,7 @@ exports[`renders button component correctly 1`] = `
       }
     }
   >
-    Search
+    Sign In
   </Text>
 </View>
 `;
