@@ -4,5 +4,16 @@
         "library": "Library",
         "detail": "Book Detail",
         "settings": "Settings"
+    },
+    "login": {
+        "registerTitle": "Welcome",
+        "registerSubheader": "Sign in to continue",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "age": "Age",
+        "years": "years",
+        "termsAndConditions": "I agree with the terms and conditions",
+        "signIn": "Sign In"
     }
 }

@@ -73,3 +73,10 @@ export const isValueLength = (
         ? conditions[condition as keyof typeof conditions](value, valueCompare)
         : false;
 };
+
+export const arrUpTo = (numberFrom: number, numberTo: number) => {
+    if (Number.isSafeInteger(numberFrom) && Number.isSafeInteger(numberTo)) {
+        return Array.from(Array(numberTo), (...params) => params[1] + numberFrom)
+    }
+    return []
+}

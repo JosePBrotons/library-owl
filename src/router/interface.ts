@@ -1,8 +1,9 @@
-import { RouteProp } from "@react-navigation/native";
+import { RouteProp } from '@react-navigation/native';
 
 export interface IOptions {
     title: string;
     headerTitleStyle?: IHeaderTitleStyle;
+    headerShown?: boolean;
 }
 
 export interface IStack {
