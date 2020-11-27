@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders input component correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "marginVertical": 15,
+      "opacity": 1,
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": undefined,
+          "fontSize": 12,
+        },
+        Object {
+          "color": "rgba(57, 172, 233, 1)",
+          "fontFamily": "Nunito-Regular",
+          "fontSize": 22,
+          "lineHeight": 30,
+        },
+        Object {
+          "fontFamily": "FontAwesome",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
+  <Text
+    ellipsizeMode="tail"
+    numberOfLines={1}
+    style={
+      Object {
+        "color": "rgba(106, 106, 106, 1)",
+        "fontFamily": "Nunito-Regular",
+        "fontSize": 14,
+        "lineHeight": 22,
+        "marginLeft": 10,
+        "textAlign": "center",
+      }
+    }
+  >
+    I agree with the terms and conditions
+  </Text>
+</View>
+`;
