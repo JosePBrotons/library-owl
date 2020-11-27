@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders login component correctly 1`] = `
+<View>
+  <Text>
+    Hola settings
+  </Text>
+</View>
+`;

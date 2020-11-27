@@ -13,7 +13,7 @@ export const stack: Array<IStack> = [
     {
         name: 'Login',
         component: Login,
-        options: { title: I18n.t('global.login') },
+        options: { title: I18n.t('global.login'), headerShown: false },
     },
     {
         name: 'Home',

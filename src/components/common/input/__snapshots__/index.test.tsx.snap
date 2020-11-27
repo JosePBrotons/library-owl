@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders input component correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(248, 248, 248, 1)",
+      "borderRadius": 5,
+      "color": "rgba(69, 69, 69, 1)",
+      "flexDirection": "row",
+      "height": 40,
+      "marginBottom": 20,
+      "paddingHorizontal": 10,
+      "width": "80%",
+    }
+  }
+>
+  <Text
+    allowFontScaling={false}
+    style={
+      Array [
+        Object {
+          "color": "rgba(233, 233, 233, 1)",
+          "fontSize": 16,
+        },
+        undefined,
+        Object {
+          "fontFamily": "FontAwesome",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+        Object {},
+      ]
+    }
+  >
+    
+  </Text>
+  <TextInput
+    allowFontScaling={true}
+    onChangeText={[Function]}
+    placeholder="Email"
+    placeholderTextColor="rgba(233, 233, 233, 1)"
+    rejectResponderTermination={true}
+    secureTextEntry={false}
+    style={
+      Object {
+        "color": "rgba(69, 69, 69, 1)",
+        "flex": 1,
+        "fontFamily": "Nunito-Regular",
+        "fontSize": 14,
+        "lineHeight": 22,
+        "paddingLeft": 8,
+      }
+    }
+    underlineColorAndroid="transparent"
+    value="me@josepbrotons.com"
+  />
+</View>
+`;

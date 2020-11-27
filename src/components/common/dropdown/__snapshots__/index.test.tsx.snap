@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders dropdown component correctly 1`] = `
+<View
+  forwardedRef={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(248, 248, 248, 1)",
+      "borderRadius": 5,
+      "color": "rgba(69, 69, 69, 1)",
+      "flexDirection": "row",
+      "height": 40,
+      "marginBottom": 10,
+      "paddingHorizontal": 10,
+      "width": "80%",
+    }
+  }
+>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgba(57, 172, 233, 1)",
+          "fontFamily": "Nunito-Regular",
+          "fontSize": 14,
+          "lineHeight": 22,
+          "paddingLeft": 8,
+        }
+      }
+    >
+      18 years
+    </Text>
+  </View>
+</View>
+`;
