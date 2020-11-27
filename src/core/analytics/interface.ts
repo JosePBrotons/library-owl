@@ -1,8 +1,8 @@
 export interface IAnalytics {
-    trackEvent: (eventData: IEventData) => Promise<void>
+    trackEvent: (eventData: IEventData) => Promise<void>;
 }
 
 export interface IEventData {
-    eventName: string,
-    properties: any
+    eventName: string;
+    properties: any;
 }
