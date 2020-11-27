@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders button component correctly 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(57, 172, 233, 1)",
+      "borderRadius": 5,
+      "height": 40,
+      "justifyContent": "center",
+      "marginBottom": 10,
+      "marginTop": 5,
+      "opacity": 1,
+      "width": "70%",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "rgba(255, 255, 255, 1)",
+        "fontFamily": "Nunito-Bold",
+        "fontSize": 16,
+        "lineHeight": 22,
+      }
+    }
+  >
+    Search
+  </Text>
+</View>
+`;
