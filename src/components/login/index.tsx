@@ -13,7 +13,7 @@ import { ILoginForm } from './interface';
 import { useAppContext } from '../../hooks';
 import { FETCHING_DATA } from '../../context/flux/types/request';
 import { FETCH_LOGIN } from './api';
-import Dropdown from '../common/dropdown';
+import Dropdown from './../common/dropdown';
 import { analyticsManager } from '../../core/analytics';
 import { IEventData } from '../../core/analytics/interface';
 import events from '../../events';
@@ -24,7 +24,7 @@ const initialFormValues: ILoginForm = {
     lastName: '',
     email: '',
     age: '',
-    checked: false,
+    termsAndConditions: false,
 };
 
 const isDisabled = (form: ILoginForm) => {
@@ -33,14 +33,14 @@ const isDisabled = (form: ILoginForm) => {
         lastName = '',
         email = '',
         age = '',
-        checked = false,
+        termsAndConditions = false,
     } = { ...form };
     return (
         !isValueLength(firstName.length, 'greatOrEq', 3) ||
         !isValueLength(lastName.length, 'greatOrEq', 3) ||
         !emailRegExp.test(email) ||
         isBlank(age) ||
-        !checked
+        !termsAndConditions
     );
 };
 
