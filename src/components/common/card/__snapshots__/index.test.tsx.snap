@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders login component correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 1)",
+      "borderRadius": 5,
+      "elevation": 3,
+      "flex": 1,
+      "marginVertical": 10,
+      "padding": 15,
+      "shadowColor": "rgba(69, 69, 69, 0.5)",
+      "shadowOffset": Object {
+        "height": 2,
+        "width": 2,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 3,
+      "width": "100%",
+    }
+  }
+/>
+`;

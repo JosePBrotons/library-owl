@@ -1,29 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders login component correctly 1`] = `
-<View>
-  <Text>
-    Hola library
-  </Text>
-  <View
-    accessible={true}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <Text>
-      Ir a detalle
-    </Text>
-  </View>
-</View>
-`;
+exports[`renders login component correctly 1`] = `null`;

@@ -5,7 +5,7 @@ export const StateContext = createContext({});
 export const DispatchContext = createContext({});
 
 const Provider = ({ children }: any) => {
-    const initialState = { loading: false, error: null, user: null };
+    const initialState = { loading: false, error: null, user: null, library: null };
     const [state, dispatch] = useReducer(reducer, initialState);
     return (
         <DispatchContext.Provider value={dispatch}>

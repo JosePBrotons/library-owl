@@ -3,5 +3,5 @@ export interface ILoginForm {
     lastName: string;
     email: string;
     age: string;
-    checked: boolean;
+    termsAndConditions: boolean;
 }
