@@ -53,15 +53,16 @@ const Library = () => {
     useEffect(() => {
         fetchAvailableBooks(dispatch);
     }, []);
-    return isArrayLength(library, 'greater', 0) ? (
+    const availableBooks = isArrayLength(library, 'greater', 0) ? library : [];
+    return (
         <FlatList
-            data={library}
+            data={availableBooks}
             showsVerticalScrollIndicator={false}
             keyExtractor={keyExtract}
             style={styles.container}
             renderItem={renderBookCard(navigate)}
         />
-    ) : null;
+    );
 };
 
 export default Library;
