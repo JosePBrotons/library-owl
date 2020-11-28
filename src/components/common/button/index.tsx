@@ -4,13 +4,13 @@ import { IButtonProps } from './interface';
 import { styles } from './styles';
 
 const Button = (props: IButtonProps) => {
-    const { text = '', disabled = false, onPress = () => null } = { ...props };
+    const { text = '', disabled = false, onPress = () => null, flat = false } = { ...props };
     return (
         <TouchableOpacity
-            style={[styles.btn, disabled ? styles.disabled : null]}
+            style={[flat ? styles.flat : styles.btn, disabled ? styles.disabled : null]}
             disabled={disabled}
             onPress={onPress}>
-            <Text style={styles.btnText}>{text}</Text>
+            <Text style={flat ? styles.flatText : styles.btnText }>{text}</Text>
         </TouchableOpacity>
     );
 };
