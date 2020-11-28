@@ -10,6 +10,8 @@ export const COLORS = {
     lighterGray: 'rgba(69, 69, 69, 0.5)',
     darkGray: 'rgba(69, 69, 69, 1)',
     blue: 'rgba(57, 172, 233, 1)',
+    lighterBlue: 'rgba(235, 246, 251, 1)',
+    green: 'rgba(76, 175, 80, 1)'
 };
 export const SIZES = {
     base: 8,

@@ -8,10 +8,8 @@ exports[`renders login component correctly 1`] = `
       "borderRadius": 5,
       "elevation": 3,
       "flex": 1,
-      "flexDirection": "row",
       "marginVertical": 10,
-      "paddingLeft": 20,
-      "paddingVertical": 15,
+      "padding": 15,
       "shadowColor": "rgba(69, 69, 69, 0.5)",
       "shadowOffset": Object {
         "height": 2,

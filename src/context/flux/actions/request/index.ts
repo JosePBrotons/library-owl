@@ -22,4 +22,20 @@ const loginFailure = (state: any, payload: any) => {
     return { ...state, error, loading };
 };
 
-export { fetchData, loginSuccess, loginFailure };
+const librarySuccess = (state: any, payload: any) => {
+    return { ...state, loading: false, library: payload };
+};
+
+const libraryFailure = (state: any, payload: any) => {
+    const error = payload;
+    const loading = false;
+    return { ...state, error, loading };
+};
+
+export {
+    fetchData,
+    loginSuccess,
+    loginFailure,
+    librarySuccess,
+    libraryFailure,
+};
