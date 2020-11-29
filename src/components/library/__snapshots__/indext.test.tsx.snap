@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders login component correctly 1`] = `
+exports[`renders books library component correctly 1`] = `
 <RCTScrollView
   data={Array []}
   disableVirtualization={false}
