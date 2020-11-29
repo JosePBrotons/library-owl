@@ -1,31 +1,15 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Image, Text, View } from 'react-native';
+import { Text } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { isArrayLength } from '../../../../utils';
 import Card from '../../../common/card';
+import Comment from './components/comment';
 import { IComment, ICommentsCardProps } from './interface';
 import { styles } from './styles';
 
-const renderCommentInfo = (username: string, comment: string) => {
-    return (
-        <View style={styles.commentContainer}>
-            <Text style={styles.username}>{username}</Text>
-            <Text style={styles.comment}>{comment}</Text>
-        </View>
-    );
-};
-
 const renderComments = (commentData: IComment, index: number) => {
-    const { comment = '', username = '', img_profile = '' } = {
-        ...commentData,
-    };
-    return (
-        <View key={index} style={styles.commentCardCont}>
-            <Image source={{ uri: img_profile }} style={styles.profileImg} />
-            {renderCommentInfo(username, comment)}
-        </View>
-    );
+    return <Comment key={index} {...commentData} />;
 };
 
 const renderViewAllComments = (comments: Array<IComment>, navigate: any) => {
