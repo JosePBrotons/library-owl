@@ -1,3 +1,13 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+export const clearData = async () => {
+    try {
+        await AsyncStorage.clear();
+    } catch (e) {
+        throw e;
+    }
+};
+
 export const isSafeDataType = (data: any): boolean => {
     switch (Object.prototype.toString.call(data)) {
         case '[object Null]':

@@ -1,0 +1,1 @@
+export const RESTORE_TOKEN = 'RESTORE_TOKEN';

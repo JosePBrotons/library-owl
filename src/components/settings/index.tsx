@@ -1,14 +1,17 @@
+import { StackActions, useNavigation } from '@react-navigation/native';
 import I18n from 'i18n-js';
 import React from 'react';
 import { Image, SafeAreaView, Text } from 'react-native';
 import { useAppContext } from '../../hooks';
+import { clearData } from '../../utils';
 import Button from '../common/button';
+import { IUser } from './interface';
 import { styles } from './styles';
 
 const DEFAULT_IMG_URL: string =
     'https://images.unsplash.com/photo-1558945657-484aa38065ec?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjZ8fG93bHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=900&q=60';
 
-const renderUserInfo = user => {
+const renderUserInfo = (user: IUser | {}) => {
     const { firstName = '', lastName = '', email = '', age = '' } = { ...user };
     return (
         <>
@@ -27,7 +30,12 @@ const renderUserInfo = user => {
     );
 };
 
-const renderActionButtons = () => {
+const onLogout = async (navDispatch: any) => {
+    await clearData();
+    navDispatch(StackActions.popToTop());
+};
+
+const renderActionButtons = (navDispatch: any) => {
     return (
         <>
             <Button
@@ -37,7 +45,7 @@ const renderActionButtons = () => {
             />
             <Button
                 text={I18n.t('settings.logOut')}
-                onPress={() => null}
+                onPress={() => onLogout(navDispatch)}
                 disabled={false}
             />
         </>
@@ -46,11 +54,12 @@ const renderActionButtons = () => {
 
 const Settings = () => {
     const [state] = useAppContext();
+    const { dispatch } = useNavigation();
     const { user = {} } = { ...state };
     return (
         <SafeAreaView style={styles.container}>
             {renderUserInfo(user)}
-            {renderActionButtons()}
+            {renderActionButtons(dispatch)}
         </SafeAreaView>
     );
 };

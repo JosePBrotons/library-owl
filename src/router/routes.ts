@@ -19,7 +19,7 @@ export const stack: Array<IStack> = [
     {
         name: 'Home',
         component: TabNavigator,
-        options: { title: I18n.t('global.library'), gestureEnabled: false },
+        options: { title: I18n.t('global.library') },
     },
     {
         name: 'Detail',

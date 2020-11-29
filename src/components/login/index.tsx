@@ -3,8 +3,13 @@ import I18n from 'i18n-js';
 import React, { useEffect } from 'react';
 import { SafeAreaView, ScrollView, Text, View } from 'react-native';
 import { Formik } from 'formik';
-import { COLORS, emailRegExp } from '../../constants';
-import { arrUpTo, isArrayLength, isBlank, isValueLength } from '../../utils';
+import { COLORS, emailRegExp, userDataKey } from '../../constants';
+import {
+    arrUpTo,
+    isArrayLength,
+    isBlank,
+    isValueLength,
+} from '../../utils';
 import Button from './../common/button';
 import CheckBox from '../common/checkbox';
 import Input from './../common/input';
@@ -18,6 +23,8 @@ import { analyticsManager } from '../../core/analytics';
 import { IEventData } from '../../core/analytics/interface';
 import events from '../../events';
 import { IInputProps } from '../common/input/interface';
+import { tokenizerManager } from '../../core/tokenizer';
+import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 
 const initialFormValues: ILoginForm = {
     firstName: '',
@@ -83,12 +90,18 @@ const renderLoginForm = (dispatch: any) => {
     return (
         <Formik
             initialValues={initialFormValues}
-            onSubmit={async values =>
+            onSubmit={async values => {
+                const token = await tokenizerManager.encode({
+                    iss: JSON.stringify(values),
+                });
                 await dispatch({
                     type: FETCHING_DATA,
-                    payload: { request: FETCH_LOGIN(values), dispatch },
-                })
-            }>
+                    payload: {
+                        request: FETCH_LOGIN({ ...values, token }),
+                        dispatch,
+                    },
+                });
+            }}>
             {({ handleChange, handleSubmit, values, setFieldValue }) => {
                 const {
                     firstName = '',
@@ -170,10 +183,16 @@ const trackLogin = async (eventData: IEventData) => {
     await analyticsManager.trackEvent(eventData);
 };
 
+const saveSession = async (token: string, setItem) => {
+    await setItem(token);
+};
+
 const Login = () => {
     const { navigate } = { ...useNavigation() };
     const [state, dispatch] = useAppContext();
+    const { setItem } = useAsyncStorage(userDataKey);
     const { user = null, loading = false } = { ...state };
+    const { token = '' } = { ...user };
     useEffect(() => {
         if (!!user) {
             const screenName: string = 'Home';
@@ -182,6 +201,7 @@ const Login = () => {
                 properties: user,
             };
             trackLogin(eventData);
+            saveSession(token, setItem);
             navigate(screenName);
         }
     }, [user]);
