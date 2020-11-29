@@ -14,7 +14,7 @@ const renderComments = (commentData: IComment, index: number) => {
 
 const renderViewAllComments = (comments: Array<IComment>, navigate: any) => {
     return isArrayLength(comments, 'greater', 2) && (
-        <TouchableOpacity style={styles.showAll} onPress={() => navigate('Comments')}>
+        <TouchableOpacity style={styles.showAll} onPress={() => navigate('Comments', { comments })}>
             <Text style={styles.showAllTxt}>{'View all'}</Text>
         </TouchableOpacity>
     )
