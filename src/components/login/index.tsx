@@ -166,6 +166,10 @@ const renderHeader = () => {
     );
 };
 
+const trackLogin = async (eventData: IEventData) => {
+    await analyticsManager.trackEvent(eventData);
+};
+
 const Login = () => {
     const { navigate } = { ...useNavigation() };
     const [state, dispatch] = useAppContext();
@@ -177,7 +181,7 @@ const Login = () => {
                 eventName: events.login.loginSuccessful,
                 properties: user,
             };
-            analyticsManager.trackEvent(eventData);
+            trackLogin(eventData);
             navigate(screenName);
         }
     }, [user]);

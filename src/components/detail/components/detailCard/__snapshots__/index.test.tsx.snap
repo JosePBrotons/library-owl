@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders book´s detail card component correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 1)",
+      "borderRadius": 5,
+      "elevation": 3,
+      "flex": 1,
+      "marginVertical": 10,
+      "padding": 15,
+      "shadowColor": "rgba(69, 69, 69, 0.5)",
+      "shadowOffset": Object {
+        "height": 2,
+        "width": 2,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 3,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "http://wolox-training.s3.amazonaws.com/uploads/6963511-M.jpg",
+        }
+      }
+      style={
+        Object {
+          "height": 100,
+          "width": 70,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "paddingHorizontal": 20,
+        }
+      }
+    >
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={2}
+        style={
+          Object {
+            "color": "rgba(69, 69, 69, 1)",
+            "fontFamily": "Nunito-Bold",
+            "fontSize": 16,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Scavenger Hunt
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "rgba(76, 175, 80, 1)",
+            "fontFamily": "Nunito-Regular",
+            "fontSize": 16,
+            "lineHeight": 22,
+          }
+        }
+      >
+        [missing "en.bookDetail.available" translation]
+      </Text>
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={2}
+        style={
+          Object {
+            "color": "rgba(106, 106, 106, 1)",
+            "fontFamily": "Nunito-Regular",
+            "fontSize": 14,
+            "lineHeight": 22,
+          }
+        }
+      >
+        Christopher Pike
+      </Text>
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "rgba(106, 106, 106, 1)",
+            "fontFamily": "Nunito-Regular",
+            "fontSize": 14,
+            "lineHeight": 22,
+          }
+        }
+      >
+        1989
+      </Text>
+      <Text
+        ellipsizeMode="tail"
+        numberOfLines={1}
+        style={
+          Object {
+            "color": "rgba(106, 106, 106, 1)",
+            "fontFamily": "Nunito-Regular",
+            "fontSize": 14,
+            "lineHeight": 22,
+          }
+        }
+      >
+        suspense
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "marginVertical": 15,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(255, 255, 255, 1)",
+          "borderColor": "rgba(57, 172, 233, 1)",
+          "borderRadius": 20,
+          "borderWidth": 1,
+          "height": 40,
+          "justifyContent": "center",
+          "marginBottom": 10,
+          "marginTop": 5,
+          "opacity": 1,
+          "width": "70%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(57, 172, 233, 1)",
+            "fontFamily": "Nunito-Bold",
+            "fontSize": 16,
+            "lineHeight": 22,
+          }
+        }
+      >
+        [missing "en.bookDetail.wishlist" translation]
+      </Text>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(57, 172, 233, 1)",
+          "borderRadius": 20,
+          "height": 40,
+          "justifyContent": "center",
+          "marginBottom": 10,
+          "marginTop": 5,
+          "opacity": 1,
+          "width": "70%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(255, 255, 255, 1)",
+            "fontFamily": "Nunito-Bold",
+            "fontSize": 16,
+            "lineHeight": 22,
+          }
+        }
+      >
+        [missing "en.bookDetail.rent" translation]
+      </Text>
+    </View>
+  </View>
+</View>
+`;

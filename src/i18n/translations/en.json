@@ -15,5 +15,11 @@
         "years": "years",
         "termsAndConditions": "I agree with the terms and conditions",
         "signIn": "Sign In"
+    },
+    "bookDetail": {
+        "available": "Available",
+        "wishlist": "Add to wishlist",
+        "rent": "Rent",
+        "suggestions": "Suggestions based on"
     }
 }

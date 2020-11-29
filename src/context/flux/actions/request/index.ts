@@ -31,6 +31,15 @@ const libraryFailure = (state: any, payload: any) => {
     const loading = false;
     return { ...state, error, loading };
 };
+const suggestionsSuccess = (state: any, payload: any) => {
+    return { ...state, loading: false, suggestions: payload };
+};
+
+const suggestionsFailure = (state: any, payload: any) => {
+    const error = payload;
+    const loading = false;
+    return { ...state, error, loading };
+};
 
 export {
     fetchData,
@@ -38,4 +47,6 @@ export {
     loginFailure,
     librarySuccess,
     libraryFailure,
+    suggestionsFailure,
+    suggestionsSuccess,
 };

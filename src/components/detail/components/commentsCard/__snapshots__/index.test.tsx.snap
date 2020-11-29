@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders comments card component correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(255, 255, 255, 1)",
+      "borderRadius": 5,
+      "elevation": 3,
+      "flex": 1,
+      "marginVertical": 10,
+      "padding": 15,
+      "shadowColor": "rgba(69, 69, 69, 0.5)",
+      "shadowOffset": Object {
+        "height": 2,
+        "width": 2,
+      },
+      "shadowOpacity": 0.5,
+      "shadowRadius": 3,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "marginVertical": 10,
+        "paddingHorizontal": 10,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "",
+        }
+      }
+      style={
+        Object {
+          "borderRadius": 50,
+          "height": 50,
+          "marginRight": 9,
+          "width": 50,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "column",
+          "paddingHorizontal": 10,
+          "width": "85%",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(69, 69, 69, 1)",
+            "fontFamily": "Nunito-Bold",
+            "fontSize": 16,
+            "lineHeight": 22,
+          }
+        }
+      >
+        John Blue
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "rgba(106, 106, 106, 1)",
+            "fontFamily": "Nunito-Regular",
+            "fontSize": 14,
+            "lineHeight": 22,
+            "textAlign": "left",
+          }
+        }
+      >
+        Interesting story, disjointed in places. Reminds me why I think wild animals should be left wild.
+      </Text>
+    </View>
+  </View>
+</View>
+`;

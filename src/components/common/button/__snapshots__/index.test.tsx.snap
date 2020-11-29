@@ -15,7 +15,7 @@ exports[`renders button component correctly 1`] = `
     Object {
       "alignItems": "center",
       "backgroundColor": "rgba(57, 172, 233, 1)",
-      "borderRadius": 5,
+      "borderRadius": 20,
       "height": 40,
       "justifyContent": "center",
       "marginBottom": 10,

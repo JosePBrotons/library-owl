@@ -4,6 +4,8 @@ import {
     librarySuccess,
     loginFailure,
     loginSuccess,
+    suggestionsFailure,
+    suggestionsSuccess,
 } from './actions/request';
 import {
     FETCHING_DATA,
@@ -11,6 +13,8 @@ import {
     FETCH_LIBRARY_SUCCESS,
     FETCH_LOGIN_FAILURE,
     FETCH_LOGIN_SUCCESS,
+    FETCH_SUGGESTION_FAILURE,
+    FETCH_SUGGESTION_SUCCESS,
 } from './types/request';
 
 const reducers: any = {
@@ -23,6 +27,10 @@ const reducers: any = {
         librarySuccess(state, payload),
     [FETCH_LIBRARY_FAILURE]: (state: any, payload: any) =>
         libraryFailure(state, payload),
+    [FETCH_SUGGESTION_SUCCESS]: (state: any, payload: any) =>
+        suggestionsSuccess(state, payload),
+    [FETCH_SUGGESTION_FAILURE]: (state: any, payload: any) =>
+        suggestionsFailure(state, payload),
     DEFAULT: (state: any) => state,
 };
 export default function reducer(state: any, action: any) {
