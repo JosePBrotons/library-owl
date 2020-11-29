@@ -6,6 +6,7 @@ import Login from '../components/login';
 import { setI18nConfig } from '../i18n';
 import { IStack, ITab } from './interface';
 import Settings from '../components/settings';
+import Comments from '../components/comments';
 
 setI18nConfig();
 
@@ -25,6 +26,11 @@ export const stack: Array<IStack> = [
         component: Detail,
         options: { title: I18n.t('global.detail') },
     },
+    {
+        name: 'Comments',
+        component: Comments,
+        options: { title: I18n.t('global.comments') }
+    }
 ];
 
 export const tabs: Array<ITab> = [

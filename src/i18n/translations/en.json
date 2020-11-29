@@ -3,7 +3,8 @@
         "login": "Login",
         "library": "Library",
         "detail": "Book Detail",
-        "settings": "Settings"
+        "settings": "Settings",
+        "comments": "Comments"
     },
     "login": {
         "registerTitle": "Welcome",
