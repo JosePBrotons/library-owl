@@ -22,5 +22,9 @@
         "wishlist": "Añadir a la lista de deseos",
         "rent": "Rentar",
         "suggestions": "Sugerencias basadas en"
+    },
+    "settings": {
+        "changeLanguage": "Cambiar idioma",
+        "logOut": "Cerrar sesión"
     }
 }

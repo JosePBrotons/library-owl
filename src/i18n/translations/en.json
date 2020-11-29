@@ -22,5 +22,9 @@
         "wishlist": "Add to wishlist",
         "rent": "Rent",
         "suggestions": "Suggestions based on"
+    },
+    "settings": {
+        "changeLanguage": "Change language",
+        "logOut": "Log out"
     }
 }

@@ -1,9 +1,145 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders settings component correctly 1`] = `
-<View>
-  <Text>
-    Hola settings
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(235, 246, 251, 1)",
+      "flex": 1,
+      "flexDirection": "column",
+      "paddingHorizontal": 20,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "uri": "https://images.unsplash.com/photo-1558945657-484aa38065ec?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjZ8fG93bHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=900&q=60",
+      }
+    }
+    style={
+      Object {
+        "borderColor": "rgba(57, 172, 233, 1)",
+        "borderRadius": 300,
+        "borderWidth": 2,
+        "height": 150,
+        "marginVertical": 20,
+        "width": 150,
+      }
+    }
+  />
+  <Text
+    style={
+      Object {
+        "color": "rgba(69, 69, 69, 1)",
+        "fontFamily": "Nunito-Bold",
+        "fontSize": 16,
+        "lineHeight": 22,
+      }
+    }
+  >
+     
   </Text>
-</View>
+  <Text
+    style={
+      Object {
+        "color": "rgba(106, 106, 106, 1)",
+        "fontFamily": "Nunito-Regular",
+        "fontSize": 16,
+        "lineHeight": 22,
+      }
+    }
+  >
+    
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "rgba(106, 106, 106, 1)",
+        "fontFamily": "Nunito-Regular",
+        "fontSize": 16,
+        "lineHeight": 22,
+        "marginBottom": 20,
+      }
+    }
+  >
+    [missing "en.login.age" translation]:  [missing "en.login.years" translation]
+  </Text>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(57, 172, 233, 1)",
+        "borderRadius": 20,
+        "height": 40,
+        "justifyContent": "center",
+        "marginBottom": 10,
+        "marginTop": 5,
+        "opacity": 1,
+        "width": "70%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgba(255, 255, 255, 1)",
+          "fontFamily": "Nunito-Bold",
+          "fontSize": 16,
+          "lineHeight": 22,
+        }
+      }
+    >
+      [missing "en.settings.changeLanguage" translation]
+    </Text>
+  </View>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(57, 172, 233, 1)",
+        "borderRadius": 20,
+        "height": 40,
+        "justifyContent": "center",
+        "marginBottom": 10,
+        "marginTop": 5,
+        "opacity": 1,
+        "width": "70%",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgba(255, 255, 255, 1)",
+          "fontFamily": "Nunito-Bold",
+          "fontSize": 16,
+          "lineHeight": 22,
+        }
+      }
+    >
+      [missing "en.settings.logOut" translation]
+    </Text>
+  </View>
+</RCTSafeAreaView>
 `;
