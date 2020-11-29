@@ -16,10 +16,10 @@ export const styles = StyleSheet.create({
         color: COLORS.darkGray,
     },
     hidden: {
-        height: 40
+        height: 40,
     },
     expanded: {
-        height: 115
+        height: 115,
     },
     label: {
         ...FONTS.body4,
@@ -27,6 +27,6 @@ export const styles = StyleSheet.create({
         paddingLeft: 8,
     },
     ages: {
-        marginVertical: 8
-    }
+        marginVertical: 8,
+    },
 });

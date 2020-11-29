@@ -6,13 +6,13 @@
  */
 
 module.exports = {
-  transformer: {
-    getTransformOptions: async () => ({
-      transform: {
-        experimentalImportSupport: false,
-        inlineRequires: false,
-        assetExt: ["png"]
-      },
-    }),
-  },
+    transformer: {
+        getTransformOptions: async () => ({
+            transform: {
+                experimentalImportSupport: false,
+                inlineRequires: false,
+                assetExt: ['png'],
+            },
+        }),
+    },
 };

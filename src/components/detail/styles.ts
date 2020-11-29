@@ -22,10 +22,10 @@ export const styles = StyleSheet.create({
     btnContainer: {
         flexDirection: 'column',
         marginVertical: 15,
-        alignItems: 'center'
+        alignItems: 'center',
     },
     suggestionsContainer: {
-        marginHorizontal: 10
+        marginHorizontal: 10,
     },
     image: {
         width: 70,

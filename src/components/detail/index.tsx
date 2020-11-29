@@ -36,12 +36,24 @@ const renderSuggestions = (
     bookId: number
 ) => {
     const arrSuggestions = getSuggestions(suggestions, bookId);
-    return isArrayLength(arrSuggestions, 'greater', 0) && <Suggestions suggestions={suggestions} genre={genre} bookId={bookId} />;
+    return (
+        isArrayLength(arrSuggestions, 'greater', 0) && (
+            <Suggestions
+                suggestions={suggestions}
+                genre={genre}
+                bookId={bookId}
+            />
+        )
+    );
 };
 
 const renderComments = (comments: Array<IComment>) => {
-    return isArrayLength(comments, 'greater', 0) && <CommentsCard comments={comments} />
-}
+    return (
+        isArrayLength(comments, 'greater', 0) && (
+            <CommentsCard comments={comments} />
+        )
+    );
+};
 const Detail = () => {
     const { params = {} } = { ...useRoute() };
     const { id = 0, genre = '', comments = [] } = { ...params };

@@ -36,5 +36,5 @@ export const styles = StyleSheet.create({
     showAllTxt: {
         ...FONTS.h3,
         color: COLORS.blue,
-    }
+    },
 });

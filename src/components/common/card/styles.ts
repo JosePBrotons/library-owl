@@ -15,6 +15,6 @@ export const styles = StyleSheet.create({
         shadowOffset: { width: 2, height: 2 },
         shadowOpacity: 0.5,
         shadowRadius: 3,
-        padding: 15
-    }
+        padding: 15,
+    },
 });

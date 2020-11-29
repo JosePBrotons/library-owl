@@ -15,18 +15,18 @@ jest.mock('react-native-reanimated', () => {
 jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 jest.mock('@react-native-firebase/analytics', () => {
     return () => ({
-        logEvent: jest.fn()
-    })
+        logEvent: jest.fn(),
+    });
 });
 
 jest.mock('@react-navigation/native', () => {
     return {
-      ...jest.requireActual('@react-navigation/native'),
-      useNavigation: () => ({
-        navigate: jest.fn(),
-      }),
-      useRoute: () => ({
-        params: {},
-      }),
+        ...jest.requireActual('@react-navigation/native'),
+        useNavigation: () => ({
+            navigate: jest.fn(),
+        }),
+        useRoute: () => ({
+            params: {},
+        }),
     };
-  });
+});

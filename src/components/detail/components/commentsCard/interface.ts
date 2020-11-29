@@ -1,9 +1,9 @@
 export interface ICommentsCardProps {
-    comments: Array<IComment>
+    comments: Array<IComment>;
 }
 
 export interface IComment {
-    username: string,
-    comment: string,
-    imgProfile: string
+    username: string;
+    comment: string;
+    imgProfile: string;
 }

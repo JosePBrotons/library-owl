@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     infoContainer: {
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
     },
     image: {
         width: 60,
