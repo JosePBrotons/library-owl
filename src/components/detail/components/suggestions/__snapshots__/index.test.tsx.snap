@@ -1,0 +1,288 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders suggestions component correctly 1`] = `
+Array [
+  <Text
+    style={
+      Object {
+        "color": "rgba(106, 106, 106, 1)",
+        "fontFamily": "Nunito-Regular",
+        "fontSize": 14,
+        "lineHeight": 22,
+      }
+    }
+  >
+    [missing "en.bookDetail.suggestions" translation] suspense
+  </Text>,
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "author": "Christopher Pike",
+          "comments": Array [
+            Object {
+              "comment": "My mom, Joyce Duhaine, passed away here at my home after being in hospice for 18 months, and she was halfway through with ‘this book. An avid, and critical, reader, she was enjoying this much more than the one she had finished before it.",
+              "username": "Joyce Duhaine",
+            },
+            Object {
+              "comment": "So excited to re-read this book! I’m sad they didn’t have any copies with the other “older” covers but they content inside is all the same. Super glad the shipping was fast!",
+              "username": "Stacey",
+            },
+          ],
+          "genre": "suspense",
+          "id": 5,
+          "image_url": "http://wolox-training.s3.amazonaws.com/uploads/6963511-M.jpg",
+          "publisher": "Pocket Books",
+          "title": "Scavenger Hunt",
+          "year": "1989",
+        },
+        Object {
+          "author": "Paula Hawkins",
+          "genre": "suspense",
+          "id": 6,
+          "image_url": "http://wolox-training.s3.amazonaws.com/uploads/content.jpeg",
+          "publisher": "Riverhead Books",
+          "title": "The Girl on the Train",
+          "year": "2015",
+        },
+        Object {
+          "author": "Anthony Doerr",
+          "comments": Array [
+            Object {
+              "comment": "It's been 10 years since I last read this and every bit as captivating as the first time. It was like reading the book for the first time because I didn't remember much from the first time reading it. Since I read this book I have made it a point to read other Lois Duncan books. I am never disappointed!",
+              "username": "Candy Evans",
+            },
+            Object {
+              "comment": "Lois Duncan has an engrossing imagination! Enjoy.",
+              "username": "Jill Shure",
+            },
+          ],
+          "genre": "suspense",
+          "id": 7,
+          "image_url": "http://wolox-training.s3.amazonaws.com/uploads/content.jpeg",
+          "publisher": "Scribner",
+          "title": "All the Light We Cannot See",
+          "year": "2014",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={true}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    showsHorizontalScrollIndicator={false}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "marginHorizontal": 10,
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(255, 255, 255, 1)",
+                "borderRadius": 5,
+                "elevation": 3,
+                "flex": 1,
+                "marginVertical": 10,
+                "padding": 15,
+                "shadowColor": "rgba(69, 69, 69, 0.5)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.5,
+                "shadowRadius": 3,
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "http://wolox-training.s3.amazonaws.com/uploads/6963511-M.jpg",
+                }
+              }
+              style={
+                Object {
+                  "height": 100,
+                  "width": 70,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "marginHorizontal": 10,
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(255, 255, 255, 1)",
+                "borderRadius": 5,
+                "elevation": 3,
+                "flex": 1,
+                "marginVertical": 10,
+                "padding": 15,
+                "shadowColor": "rgba(69, 69, 69, 0.5)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.5,
+                "shadowRadius": 3,
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "http://wolox-training.s3.amazonaws.com/uploads/content.jpeg",
+                }
+              }
+              style={
+                Object {
+                  "height": 100,
+                  "width": 70,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "marginHorizontal": 10,
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "rgba(255, 255, 255, 1)",
+                "borderRadius": 5,
+                "elevation": 3,
+                "flex": 1,
+                "marginVertical": 10,
+                "padding": 15,
+                "shadowColor": "rgba(69, 69, 69, 0.5)",
+                "shadowOffset": Object {
+                  "height": 2,
+                  "width": 2,
+                },
+                "shadowOpacity": 0.5,
+                "shadowRadius": 3,
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "uri": "http://wolox-training.s3.amazonaws.com/uploads/content.jpeg",
+                }
+              }
+              style={
+                Object {
+                  "height": 100,
+                  "width": 70,
+                }
+              }
+            />
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>,
+]
+`;

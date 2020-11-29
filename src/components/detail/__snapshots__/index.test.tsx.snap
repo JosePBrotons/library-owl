@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders login component correctly 1`] = `
+exports[`renders book detail component correctly 1`] = `
 <RCTScrollView
   style={
     Object {
