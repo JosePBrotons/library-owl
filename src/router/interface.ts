@@ -4,6 +4,7 @@ export interface IOptions {
     title: string;
     headerTitleStyle?: IHeaderTitleStyle;
     headerShown?: boolean;
+    gestureEnabled?: boolean;
 }
 
 export interface IStack {

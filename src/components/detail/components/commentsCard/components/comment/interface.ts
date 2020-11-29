@@ -1,5 +1,5 @@
 export interface ICommentProps {
-    username: string,
-    comment: string,
-    imgProfile: string
+    username: string;
+    comment: string;
+    imgProfile: string;
 }

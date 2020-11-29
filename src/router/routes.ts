@@ -19,7 +19,7 @@ export const stack: Array<IStack> = [
     {
         name: 'Home',
         component: TabNavigator,
-        options: { title: I18n.t('global.library') },
+        options: { title: I18n.t('global.library'), gestureEnabled: false },
     },
     {
         name: 'Detail',
@@ -29,8 +29,8 @@ export const stack: Array<IStack> = [
     {
         name: 'Comments',
         component: Comments,
-        options: { title: I18n.t('global.comments') }
-    }
+        options: { title: I18n.t('global.comments') },
+    },
 ];
 
 export const tabs: Array<ITab> = [

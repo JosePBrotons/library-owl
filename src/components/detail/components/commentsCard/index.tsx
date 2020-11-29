@@ -13,12 +13,16 @@ const renderComments = (commentData: IComment, index: number) => {
 };
 
 const renderViewAllComments = (comments: Array<IComment>, navigate: any) => {
-    return isArrayLength(comments, 'greater', 2) && (
-        <TouchableOpacity style={styles.showAll} onPress={() => navigate('Comments', { comments })}>
-            <Text style={styles.showAllTxt}>{'View all'}</Text>
-        </TouchableOpacity>
-    )
-}
+    return (
+        isArrayLength(comments, 'greater', 2) && (
+            <TouchableOpacity
+                style={styles.showAll}
+                onPress={() => navigate('Comments', { comments })}>
+                <Text style={styles.showAllTxt}>{'View all'}</Text>
+            </TouchableOpacity>
+        )
+    );
+};
 
 const getComments = (comments: Array<IComment>) => {
     return isArrayLength(comments, 'greater', 2)

@@ -9,24 +9,27 @@ export const styles = StyleSheet.create({
         flexDirection: 'column',
         paddingHorizontal: 20,
         backgroundColor: COLORS.lighterBlue,
+        alignItems: 'center',
     },
-    cardContainer: {
-        flexDirection: 'row',
-    },
-    infoContainer: {
-        justifyContent: 'flex-start',
-    },
-    image: {
-        width: 60,
-        height: 90,
-        marginRight: 20,
-    },
-    title: {
+    name: {
         ...FONTS.h3,
         color: COLORS.darkGray,
     },
-    author: {
+    email: {
         ...FONTS.body3,
         color: COLORS.gray,
+    },
+    age: {
+        ...FONTS.body3,
+        color: COLORS.gray,
+        marginBottom: 20,
+    },
+    profileImg: {
+        height: 150,
+        width: 150,
+        borderRadius: 300,
+        marginVertical: 20,
+        borderColor: COLORS.blue,
+        borderWidth: 2,
     },
 });

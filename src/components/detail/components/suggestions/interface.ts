@@ -1,7 +1,7 @@
-import { IRouteParams } from "../../interface";
+import { IRouteParams } from '../../interface';
 
 export interface ISuggestionsProps {
-    suggestions: Array<IRouteParams>
-    genre: string,
-    bookId: number
+    suggestions: Array<IRouteParams>;
+    genre: string;
+    bookId: number;
 }

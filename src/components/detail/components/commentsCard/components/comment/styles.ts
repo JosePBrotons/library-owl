@@ -28,5 +28,5 @@ export const styles = StyleSheet.create({
         flexDirection: 'column',
         paddingHorizontal: 10,
         width: '85%',
-    }
+    },
 });

@@ -41,6 +41,6 @@ export const styles = StyleSheet.create({
         marginBottom: 20,
     },
     inputPlaceholder: {
-        color: COLORS.blue
-    }
+        color: COLORS.blue,
+    },
 });

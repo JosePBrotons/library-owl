@@ -76,7 +76,10 @@ export const isValueLength = (
 
 export const arrUpTo = (numberFrom: number, numberTo: number) => {
     if (Number.isSafeInteger(numberFrom) && Number.isSafeInteger(numberTo)) {
-        return Array.from(Array(numberTo), (...params) => params[1] + numberFrom)
+        return Array.from(
+            Array(numberTo),
+            (...params) => params[1] + numberFrom
+        );
     }
-    return []
-}
+    return [];
+};
