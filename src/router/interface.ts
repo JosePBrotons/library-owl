@@ -1,5 +1,8 @@
 import { RouteProp } from '@react-navigation/native';
 
+export interface IRouterProps {
+    initialRoute: Promise<string> | string;
+}
 export interface IOptions {
     title: string;
     headerTitleStyle?: IHeaderTitleStyle;
