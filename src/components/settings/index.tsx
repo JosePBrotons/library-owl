@@ -3,6 +3,8 @@ import I18n from 'i18n-js';
 import React from 'react';
 import { Image, SafeAreaView, Text } from 'react-native';
 import { CHANGE_LANGUAGE, CLEAR_ALL } from '../../context/flux/types/behavior';
+import { analyticsManager } from '../../core/analytics';
+import events from '../../events';
 import { useAppContext } from '../../hooks';
 import { setI18nConfig } from '../../i18n';
 import { clearData } from '../../utils';
@@ -42,6 +44,10 @@ const onLogout = (navDispatch: any, dispatch) => {
     return async () => {
         await clearData();
         await dispatch({ type: CLEAR_ALL });
+        await analyticsManager.trackEvent({
+            eventName: events.login.logOut,
+            properties: null,
+        });
         navDispatch(StackActions.popToTop());
     };
 };
@@ -53,6 +59,11 @@ const changeLanguage = (dispatch: any) => {
             type: CHANGE_LANGUAGE,
             payload: I18n.currentLocale(),
         });
+        const eventData = {
+            eventName: events.settings.changeLanguage,
+            properties: { changedLang: I18n.currentLocale() },
+        };
+        await analyticsManager.trackEvent(eventData);
     };
 };
 
