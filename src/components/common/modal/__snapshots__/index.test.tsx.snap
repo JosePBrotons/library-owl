@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders modal component correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(69, 69, 69, 0.5)",
+      "bottom": 0,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+      "zIndex": 100,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(255, 255, 255, 1)",
+        "borderRadius": 7,
+        "paddingVertical": 15,
+        "width": "70%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "column",
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "rgba(30, 31, 32, 1)",
+            "fontFamily": "Nunito-Bold",
+            "fontSize": 16,
+            "lineHeight": 22,
+            "textAlign": "center",
+          }
+        }
+      >
+        Warning
+      </Text>
+      <Text
+        style={
+          Object {
+            "color": "rgba(69, 69, 69, 1)",
+            "fontFamily": "Nunito-Regular",
+            "fontSize": 16,
+            "lineHeight": 22,
+            "marginVertical": 15,
+            "textAlign": "center",
+          }
+        }
+      >
+        Your internet connection is not stable
+      </Text>
+    </View>
+    <RNGestureHandlerButton
+      collapsable={false}
+      onGestureEvent={[Function]}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onHandlerStateChange={[Function]}
+      rippleColor={0}
+    >
+      <View
+        accessible={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "borderTopColor": "rgba(233, 233, 233, 1)",
+            "borderTopWidth": 0.5,
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "opacity": 1,
+            "paddingTop": 5,
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "rgba(57, 172, 233, 1)",
+              "fontFamily": "Nunito-Bold",
+              "fontSize": 14,
+              "lineHeight": 22,
+              "textAlign": "center",
+              "width": "100%",
+            }
+          }
+        >
+          [missing "en.global.ok" translation]
+        </Text>
+      </View>
+    </RNGestureHandlerButton>
+  </View>
+</View>
+`;

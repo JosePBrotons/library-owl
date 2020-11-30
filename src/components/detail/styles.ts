@@ -31,8 +31,13 @@ export const styles = StyleSheet.create({
         width: 70,
         height: 100,
     },
+    loading: {
+        color: COLORS.blue,
+        marginVertical: 10,
+    },
     title: {
         ...FONTS.h3,
+        width: '80%',
         color: COLORS.darkGray,
     },
     available: {

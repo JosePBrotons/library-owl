@@ -1,4 +1,10 @@
-import { changeLanguage, restoreToken } from './actions/behavior';
+import {
+    changeLanguage,
+    clearAll,
+    getRentals,
+    restoreToken,
+    setNewRental,
+} from './actions/behavior';
 import {
     fetchData,
     libraryFailure,
@@ -8,7 +14,13 @@ import {
     suggestionsFailure,
     suggestionsSuccess,
 } from './actions/request';
-import { CHANGE_LANGUAGE, RESTORE_TOKEN } from './types/behavior';
+import {
+    CHANGE_LANGUAGE,
+    CLEAR_ALL,
+    GET_RENTALS,
+    RESTORE_TOKEN,
+    SET_RENTAL,
+} from './types/behavior';
 import {
     FETCHING_DATA,
     FETCH_LIBRARY_FAILURE,
@@ -33,9 +45,12 @@ const reducers: any = {
         suggestionsSuccess(state, payload),
     [FETCH_SUGGESTION_FAILURE]: (state: any, payload: any) =>
         suggestionsFailure(state, payload),
-    [RESTORE_TOKEN]: (state: any, payload: any) =>
-        restoreToken(state, payload),
-    [CHANGE_LANGUAGE]: (state: any, payload: any) => changeLanguage(state, payload),
+    [RESTORE_TOKEN]: (state: any, payload: any) => restoreToken(state, payload),
+    [CHANGE_LANGUAGE]: (state: any, payload: any) =>
+        changeLanguage(state, payload),
+    [GET_RENTALS]: (state: any, payload: any) => getRentals(state, payload),
+    [SET_RENTAL]: (state: any, payload: any) => setNewRental(state, payload),
+    [CLEAR_ALL]: (state: any, payload: any) => clearAll(state, payload),
     DEFAULT: (state: any) => state,
 };
 export default function reducer(state: any, action: any) {

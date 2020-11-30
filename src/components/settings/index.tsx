@@ -1,8 +1,8 @@
 import { StackActions, useNavigation } from '@react-navigation/native';
 import I18n from 'i18n-js';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Image, SafeAreaView, Text } from 'react-native';
-import { CHANGE_LANGUAGE } from '../../context/flux/types/behavior';
+import { CHANGE_LANGUAGE, CLEAR_ALL } from '../../context/flux/types/behavior';
 import { useAppContext } from '../../hooks';
 import { setI18nConfig } from '../../i18n';
 import { clearData } from '../../utils';
@@ -38,11 +38,12 @@ const renderUserInfo = (user: IUser | {}) => {
     );
 };
 
-const onLogout = (navDispatch: any) => {
+const onLogout = (navDispatch: any, dispatch) => {
     return async () => {
         await clearData();
+        await dispatch({ type: CLEAR_ALL });
         navDispatch(StackActions.popToTop());
-    }
+    };
 };
 
 const changeLanguage = (dispatch: any) => {
@@ -65,7 +66,7 @@ const renderActionButtons = (navDispatch: any, dispatch: any) => {
             />
             <Button
                 text={I18n.t('settings.logOut')}
-                onPress={onLogout(navDispatch)}
+                onPress={onLogout(navDispatch, dispatch)}
                 disabled={false}
             />
         </>

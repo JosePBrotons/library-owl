@@ -4,7 +4,9 @@
         "library": "Biblioteca",
         "detail": "Detalle del libro",
         "settings": "Ajustes",
-        "comments": "Comentarios"
+        "rentals": "Alquileres",
+        "comments": "Comentarios",
+        "ok": "Aceptar"
     },
     "login": {
         "registerTitle": "Bienvenido",
@@ -21,10 +23,18 @@
         "available": "Disponible",
         "wishlist": "Añadir a la lista de deseos",
         "rent": "Rentar",
-        "suggestions": "Sugerencias basadas en"
+        "rented": "Rentado",
+        "suggestions": "Sugerencias basadas en",
+        "bookRented": "Libro rentado",
+        "rentedSuccessful": "Libro rentado de manera satisfactoria",
+        "rentedAlready": "Libro ya rentado",
+        "rentedAlreadyMsg": "Este libro ya ha sido rentado, por favor renta otro"
     },
     "settings": {
         "changeLanguage": "Cambiar idioma",
         "logOut": "Cerrar sesión"
+    },
+    "rentals": {
+        "empty": "No has rentado ningún libro aún"
     }
 }

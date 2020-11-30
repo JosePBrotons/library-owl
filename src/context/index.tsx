@@ -4,15 +4,17 @@ import reducer from './flux';
 export const StateContext = createContext({});
 export const DispatchContext = createContext({});
 
+export const initialState = {
+    loading: false,
+    error: null,
+    user: null,
+    library: null,
+    suggestions: null,
+    rentals: [],
+    language: 'en',
+};
+
 const Provider = ({ children }: any) => {
-    const initialState = {
-        loading: false,
-        error: null,
-        user: null,
-        library: null,
-        suggestions: null,
-        language: 'en',
-    };
     const [state, dispatch] = useReducer(reducer, initialState);
     return (
         <DispatchContext.Provider value={dispatch}>

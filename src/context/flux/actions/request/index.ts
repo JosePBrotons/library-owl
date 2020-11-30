@@ -5,10 +5,10 @@ const fetchData = (state: any, payload: any) => {
     const loading = true;
     httpManager
         .requestHandler({ payload })
-        .then(response =>
+        .then((response) =>
             dispatch({ type: request.success, payload: response })
         )
-        .catch(err => dispatch({ type: request.failure, payload: err }));
+        .catch((err) => dispatch({ type: request.failure, payload: err }));
     return { ...state, loading };
 };
 

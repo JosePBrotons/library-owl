@@ -8,6 +8,7 @@ import Library from '../../components/library';
 import Settings from '../../components/settings';
 import I18n from 'i18n-js';
 import { useAppContext } from '../../hooks';
+import Rentals from '../../components/rentals';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,6 +34,7 @@ const getTabIconByRouteName = (routeName: string) => {
     const tabIconByRouteName = {
         Library: 'book',
         Settings: 'gear',
+        Rentals: 'bookmark',
         DEFAULT: 'info-circle',
     };
     const route: string = !!routeName ? routeName : 'DEFAULT';
@@ -56,6 +58,11 @@ const TabNavigator = () => {
             name: 'Library',
             component: Library,
             options: { title: I18n.t('global.library') },
+        },
+        {
+            name: 'Rentals',
+            component: Rentals,
+            options: { title: I18n.t('global.rentals') },
         },
         {
             name: 'Settings',

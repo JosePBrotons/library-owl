@@ -4,12 +4,7 @@ import React, { useEffect } from 'react';
 import { SafeAreaView, ScrollView, Text, View } from 'react-native';
 import { Formik } from 'formik';
 import { COLORS, emailRegExp, userDataKey } from '../../constants';
-import {
-    arrUpTo,
-    isArrayLength,
-    isBlank,
-    isValueLength,
-} from '../../utils';
+import { arrUpTo, isArrayLength, isBlank, isValueLength } from '../../utils';
 import Button from './../common/button';
 import CheckBox from '../common/checkbox';
 import Input from './../common/input';
@@ -90,7 +85,7 @@ const renderLoginForm = (dispatch: any) => {
     return (
         <Formik
             initialValues={initialFormValues}
-            onSubmit={async values => {
+            onSubmit={async (values) => {
                 const token = await tokenizerManager.encode({
                     iss: JSON.stringify(values),
                 });

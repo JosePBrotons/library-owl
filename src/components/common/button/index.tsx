@@ -18,7 +18,11 @@ const Button = (props: IButtonProps) => {
             ]}
             disabled={disabled}
             onPress={onPress}>
-            <Text style={flat ? styles.flatText : styles.btnText}>{text}</Text>
+            <Text
+                style={flat ? styles.flatText : styles.btnText}
+                numberOfLines={1}>
+                {text}
+            </Text>
         </TouchableOpacity>
     );
 };
