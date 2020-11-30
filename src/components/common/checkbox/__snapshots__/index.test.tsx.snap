@@ -16,9 +16,10 @@ exports[`renders input component correctly 1`] = `
       "alignItems": "center",
       "flex": 1,
       "flexDirection": "row",
-      "justifyContent": "space-between",
+      "justifyContent": "center",
       "marginVertical": 15,
       "opacity": 1,
+      "width": "80%",
     }
   }
 >
