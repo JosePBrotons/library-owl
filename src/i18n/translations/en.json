@@ -6,6 +6,7 @@
         "settings": "Settings",
         "rentals": "Rentals",
         "comments": "Comments",
+        "loading": "Loading...",
         "ok": "OK"
     },
     "login": {

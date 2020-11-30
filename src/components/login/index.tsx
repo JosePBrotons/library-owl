@@ -20,6 +20,7 @@ import events from '../../events';
 import { IInputProps } from '../common/input/interface';
 import { tokenizerManager } from '../../core/tokenizer';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
+import LoadingHOC from '../common/loading';
 
 const initialFormValues: ILoginForm = {
     firstName: '',
@@ -182,6 +183,8 @@ const saveSession = async (token: string, setItem: any) => {
     await setItem(token);
 };
 
+const FullScreenLoadingHOC = LoadingHOC(SafeAreaView);
+
 const Login = () => {
     const { navigate } = { ...useNavigation() };
     const [state, dispatch] = useAppContext();
@@ -201,12 +204,12 @@ const Login = () => {
         }
     }, [user]);
     return (
-        <SafeAreaView style={styles.container}>
+        <FullScreenLoadingHOC loading={loading} style={styles.container}>
             <ScrollView style={styles.container}>
                 {renderHeader()}
                 {renderLoginForm(dispatch)}
             </ScrollView>
-        </SafeAreaView>
+        </FullScreenLoadingHOC>
     );
 };
 

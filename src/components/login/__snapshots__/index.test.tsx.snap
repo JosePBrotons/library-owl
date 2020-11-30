@@ -1,197 +1,235 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders login component correctly 1`] = `
-<RCTSafeAreaView
-  emulateUnlessSupported={true}
+<View
   style={
     Object {
-      "backgroundColor": "rgba(255, 255, 255, 1)",
       "flex": 1,
-      "flexDirection": "column",
-      "paddingHorizontal": 20,
     }
   }
 >
-  <RCTScrollView
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
     style={
       Object {
         "backgroundColor": "rgba(255, 255, 255, 1)",
         "flex": 1,
         "flexDirection": "column",
-        "paddingHorizontal": 20,
+        "paddingHorizontal": 40,
       }
     }
   >
-    <View>
-      <View
-        style={
-          Object {
-            "alignItems": "flex-start",
-            "flex": 1,
-            "flexDirection": "column",
-            "marginVertical": 40,
-          }
+    <RCTScrollView
+      style={
+        Object {
+          "backgroundColor": "rgba(255, 255, 255, 1)",
+          "flex": 1,
+          "flexDirection": "column",
+          "paddingHorizontal": 40,
         }
-      >
-        <Text
-          style={
-            Object {
-              "color": "rgba(30, 31, 32, 1)",
-              "fontFamily": "Nunito-Black",
-              "fontSize": 30,
-              "lineHeight": 36,
-            }
-          }
-        >
-          [missing "en.login.registerTitle" translation],
-        </Text>
-        <Text
-          style={
-            Object {
-              "color": "rgba(106, 106, 106, 1)",
-              "fontFamily": "Nunito-Regular",
-              "fontSize": 22,
-              "lineHeight": 30,
-            }
-          }
-        >
-          [missing "en.login.registerSubheader" translation]!
-        </Text>
-      </View>
-      <View
-        style={
-          Object {
-            "alignItems": "center",
-            "flex": 2,
-            "justifyContent": "center",
-            "marginVertical": 30,
-          }
-        }
-      >
+      }
+    >
+      <View>
         <View
           style={
             Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(248, 248, 248, 1)",
-              "borderRadius": 5,
-              "color": "rgba(69, 69, 69, 1)",
-              "flexDirection": "row",
-              "height": 40,
-              "marginBottom": 20,
-              "paddingHorizontal": 10,
-              "width": "80%",
+              "alignItems": "flex-start",
+              "flex": 1,
+              "flexDirection": "column",
+              "marginVertical": 40,
             }
           }
         >
-          <TextInput
-            allowFontScaling={true}
-            onChangeText={[Function]}
-            placeholder="[missing \\"en.login.firstName\\" translation]"
-            placeholderTextColor="rgba(57, 172, 233, 1)"
-            rejectResponderTermination={true}
-            secureTextEntry={false}
+          <Text
             style={
               Object {
-                "color": "rgba(69, 69, 69, 1)",
-                "flex": 1,
-                "fontFamily": "Nunito-Regular",
-                "fontSize": 14,
-                "lineHeight": 22,
-                "paddingLeft": 8,
+                "color": "rgba(30, 31, 32, 1)",
+                "fontFamily": "Nunito-Black",
+                "fontSize": 30,
+                "lineHeight": 36,
               }
             }
-            underlineColorAndroid="transparent"
-            value=""
-          />
+          >
+            [missing "en.login.registerTitle" translation],
+          </Text>
+          <Text
+            style={
+              Object {
+                "color": "rgba(106, 106, 106, 1)",
+                "fontFamily": "Nunito-Regular",
+                "fontSize": 22,
+                "lineHeight": 30,
+              }
+            }
+          >
+            [missing "en.login.registerSubheader" translation]!
+          </Text>
         </View>
         <View
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "rgba(248, 248, 248, 1)",
-              "borderRadius": 5,
-              "color": "rgba(69, 69, 69, 1)",
-              "flexDirection": "row",
-              "height": 40,
-              "marginBottom": 20,
-              "paddingHorizontal": 10,
-              "width": "80%",
+              "flex": 2,
+              "justifyContent": "center",
+              "marginVertical": 30,
             }
           }
         >
-          <TextInput
-            allowFontScaling={true}
-            onChangeText={[Function]}
-            placeholder="[missing \\"en.login.lastName\\" translation]"
-            placeholderTextColor="rgba(57, 172, 233, 1)"
-            rejectResponderTermination={true}
-            secureTextEntry={false}
+          <View
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgba(248, 248, 248, 1)",
+                "borderRadius": 5,
                 "color": "rgba(69, 69, 69, 1)",
-                "flex": 1,
-                "fontFamily": "Nunito-Regular",
-                "fontSize": 14,
-                "lineHeight": 22,
-                "paddingLeft": 8,
+                "flexDirection": "row",
+                "height": 40,
+                "marginBottom": 20,
+                "paddingHorizontal": 10,
+                "width": "80%",
               }
             }
-            underlineColorAndroid="transparent"
-            value=""
-          />
-        </View>
-        <View
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(248, 248, 248, 1)",
-              "borderRadius": 5,
-              "color": "rgba(69, 69, 69, 1)",
-              "flexDirection": "row",
-              "height": 40,
-              "marginBottom": 20,
-              "paddingHorizontal": 10,
-              "width": "80%",
-            }
-          }
-        >
-          <TextInput
-            allowFontScaling={true}
-            onChangeText={[Function]}
-            placeholder="[missing \\"en.login.email\\" translation]"
-            placeholderTextColor="rgba(57, 172, 233, 1)"
-            rejectResponderTermination={true}
-            secureTextEntry={false}
+          >
+            <TextInput
+              allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="[missing \\"en.login.firstName\\" translation]"
+              placeholderTextColor="rgba(57, 172, 233, 1)"
+              rejectResponderTermination={true}
+              secureTextEntry={false}
+              style={
+                Object {
+                  "color": "rgba(69, 69, 69, 1)",
+                  "flex": 1,
+                  "fontFamily": "Nunito-Regular",
+                  "fontSize": 14,
+                  "lineHeight": 22,
+                  "paddingLeft": 8,
+                }
+              }
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+          <View
             style={
               Object {
+                "alignItems": "center",
+                "backgroundColor": "rgba(248, 248, 248, 1)",
+                "borderRadius": 5,
                 "color": "rgba(69, 69, 69, 1)",
-                "flex": 1,
-                "fontFamily": "Nunito-Regular",
-                "fontSize": 14,
-                "lineHeight": 22,
-                "paddingLeft": 8,
+                "flexDirection": "row",
+                "height": 40,
+                "marginBottom": 20,
+                "paddingHorizontal": 10,
+                "width": "80%",
               }
             }
-            underlineColorAndroid="transparent"
-            value=""
-          />
-        </View>
-        <View
-          forwardedRef={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(248, 248, 248, 1)",
-              "borderRadius": 5,
-              "color": "rgba(69, 69, 69, 1)",
-              "flexDirection": "row",
-              "height": 40,
-              "marginBottom": 10,
-              "paddingHorizontal": 10,
-              "width": "80%",
+          >
+            <TextInput
+              allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="[missing \\"en.login.lastName\\" translation]"
+              placeholderTextColor="rgba(57, 172, 233, 1)"
+              rejectResponderTermination={true}
+              secureTextEntry={false}
+              style={
+                Object {
+                  "color": "rgba(69, 69, 69, 1)",
+                  "flex": 1,
+                  "fontFamily": "Nunito-Regular",
+                  "fontSize": 14,
+                  "lineHeight": 22,
+                  "paddingLeft": 8,
+                }
+              }
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgba(248, 248, 248, 1)",
+                "borderRadius": 5,
+                "color": "rgba(69, 69, 69, 1)",
+                "flexDirection": "row",
+                "height": 40,
+                "marginBottom": 20,
+                "paddingHorizontal": 10,
+                "width": "80%",
+              }
             }
-          }
-        >
+          >
+            <TextInput
+              allowFontScaling={true}
+              onChangeText={[Function]}
+              placeholder="[missing \\"en.login.email\\" translation]"
+              placeholderTextColor="rgba(57, 172, 233, 1)"
+              rejectResponderTermination={true}
+              secureTextEntry={false}
+              style={
+                Object {
+                  "color": "rgba(69, 69, 69, 1)",
+                  "flex": 1,
+                  "fontFamily": "Nunito-Regular",
+                  "fontSize": 14,
+                  "lineHeight": 22,
+                  "paddingLeft": 8,
+                }
+              }
+              underlineColorAndroid="transparent"
+              value=""
+            />
+          </View>
+          <View
+            forwardedRef={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgba(248, 248, 248, 1)",
+                "borderRadius": 5,
+                "color": "rgba(69, 69, 69, 1)",
+                "flexDirection": "row",
+                "height": 40,
+                "marginBottom": 10,
+                "paddingHorizontal": 10,
+                "width": "80%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "rgba(57, 172, 233, 1)",
+                    "fontFamily": "Nunito-Regular",
+                    "fontSize": 14,
+                    "lineHeight": 22,
+                    "paddingLeft": 8,
+                  }
+                }
+              >
+                [missing "en.login.age" translation]
+              </Text>
+            </View>
+          </View>
           <View
             accessible={true}
             focusable={true}
@@ -204,130 +242,100 @@ exports[`renders login component correctly 1`] = `
             onStartShouldSetResponder={[Function]}
             style={
               Object {
+                "alignItems": "center",
+                "flex": 1,
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "marginVertical": 15,
                 "opacity": 1,
+                "width": "80%",
               }
             }
           >
             <Text
+              allowFontScaling={false}
+              style={
+                Array [
+                  Object {
+                    "color": undefined,
+                    "fontSize": 12,
+                  },
+                  Object {
+                    "color": "rgba(57, 172, 233, 1)",
+                    "fontFamily": "Nunito-Regular",
+                    "fontSize": 22,
+                    "lineHeight": 30,
+                  },
+                  Object {
+                    "fontFamily": "FontAwesome",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              
+            </Text>
+            <Text
+              ellipsizeMode="tail"
+              numberOfLines={1}
               style={
                 Object {
-                  "color": "rgba(57, 172, 233, 1)",
+                  "color": "rgba(106, 106, 106, 1)",
                   "fontFamily": "Nunito-Regular",
                   "fontSize": 14,
                   "lineHeight": 22,
-                  "paddingLeft": 8,
+                  "marginLeft": 10,
+                  "textAlign": "center",
                 }
               }
             >
-              [missing "en.login.age" translation]
+              [missing "en.login.termsAndConditions" translation]
+            </Text>
+          </View>
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgba(57, 172, 233, 1)",
+                "borderRadius": 20,
+                "height": 40,
+                "justifyContent": "center",
+                "marginBottom": 10,
+                "marginTop": 5,
+                "opacity": 0.5,
+                "paddingHorizontal": 10,
+                "width": "70%",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Object {
+                  "color": "rgba(255, 255, 255, 1)",
+                  "fontFamily": "Nunito-Bold",
+                  "fontSize": 16,
+                  "lineHeight": 22,
+                }
+              }
+            >
+              [missing "en.login.signIn" translation]
             </Text>
           </View>
         </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "flex": 1,
-              "flexDirection": "row",
-              "justifyContent": "center",
-              "marginVertical": 15,
-              "opacity": 1,
-              "width": "80%",
-            }
-          }
-        >
-          <Text
-            allowFontScaling={false}
-            style={
-              Array [
-                Object {
-                  "color": undefined,
-                  "fontSize": 12,
-                },
-                Object {
-                  "color": "rgba(57, 172, 233, 1)",
-                  "fontFamily": "Nunito-Regular",
-                  "fontSize": 22,
-                  "lineHeight": 30,
-                },
-                Object {
-                  "fontFamily": "FontAwesome",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-                Object {},
-              ]
-            }
-          >
-            
-          </Text>
-          <Text
-            ellipsizeMode="tail"
-            numberOfLines={1}
-            style={
-              Object {
-                "color": "rgba(106, 106, 106, 1)",
-                "fontFamily": "Nunito-Regular",
-                "fontSize": 14,
-                "lineHeight": 22,
-                "marginLeft": 10,
-                "textAlign": "center",
-              }
-            }
-          >
-            [missing "en.login.termsAndConditions" translation]
-          </Text>
-        </View>
-        <View
-          accessible={true}
-          focusable={true}
-          onClick={[Function]}
-          onResponderGrant={[Function]}
-          onResponderMove={[Function]}
-          onResponderRelease={[Function]}
-          onResponderTerminate={[Function]}
-          onResponderTerminationRequest={[Function]}
-          onStartShouldSetResponder={[Function]}
-          style={
-            Object {
-              "alignItems": "center",
-              "backgroundColor": "rgba(57, 172, 233, 1)",
-              "borderRadius": 20,
-              "height": 40,
-              "justifyContent": "center",
-              "marginBottom": 10,
-              "marginTop": 5,
-              "opacity": 0.5,
-              "paddingHorizontal": 10,
-              "width": "70%",
-            }
-          }
-        >
-          <Text
-            numberOfLines={1}
-            style={
-              Object {
-                "color": "rgba(255, 255, 255, 1)",
-                "fontFamily": "Nunito-Bold",
-                "fontSize": 16,
-                "lineHeight": 22,
-              }
-            }
-          >
-            [missing "en.login.signIn" translation]
-          </Text>
-        </View>
       </View>
-    </View>
-  </RCTScrollView>
-</RCTSafeAreaView>
+    </RCTScrollView>
+  </RCTSafeAreaView>
+</View>
 `;
