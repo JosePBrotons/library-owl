@@ -6,8 +6,13 @@ const translationGetters: any = {
     es: () => require('./translations/es.json'),
 };
 
-export const setI18nConfig = () => {
+export const setI18nConfig = (lang: string = '') => {
     const fallback = { languageTag: 'en' };
+    if (!!lang) {
+        i18n.translations = { [lang]: translationGetters[lang]() };
+        i18n.locale = lang;
+        return;
+    }
     const { languageTag = 'en' } =
         RNLocalize.findBestAvailableLanguage(Object.keys(translationGetters)) ??
         fallback;
