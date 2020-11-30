@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders LoadingHOC component correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <View />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(69, 69, 69, 0.5)",
+          "justifyContent": "center",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(255, 255, 255, 1)",
+          "borderRadius": 7,
+          "paddingVertical": 20,
+          "width": "30%",
+        }
+      }
+    >
+      <ActivityIndicator
+        animating={true}
+        color="rgba(57, 172, 233, 1)"
+        hidesWhenStopped={true}
+        size="large"
+      />
+      <Text
+        style={
+          Object {
+            "color": "rgba(69, 69, 69, 1)",
+            "fontFamily": "Nunito-Bold",
+            "fontSize": 16,
+            "lineHeight": 22,
+            "marginTop": 8,
+            "textAlign": "center",
+          }
+        }
+      >
+        [missing "en.global.loading" translation]
+      </Text>
+    </View>
+  </View>
+</View>
+`;
