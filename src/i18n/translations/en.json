@@ -4,7 +4,9 @@
         "library": "Library",
         "detail": "Book Detail",
         "settings": "Settings",
-        "comments": "Comments"
+        "rentals": "Rentals",
+        "comments": "Comments",
+        "ok": "OK"
     },
     "login": {
         "registerTitle": "Welcome",
@@ -21,10 +23,18 @@
         "available": "Available",
         "wishlist": "Add to wishlist",
         "rent": "Rent",
-        "suggestions": "Suggestions based on"
+        "rented": "Rented",
+        "suggestions": "Suggestions based on",
+        "bookRented": "Book rented",
+        "rentedSuccessful": "Book rented successfully",
+        "rentedAlready": "Already rented",
+        "rentedAlreadyMsg": "This book has already been rented, please rent another one."
     },
     "settings": {
         "changeLanguage": "Change language",
         "logOut": "Log out"
+    },
+    "rentals": {
+        "empty": "You haven't rented any books yet"
     }
 }
