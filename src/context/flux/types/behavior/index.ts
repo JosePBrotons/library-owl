@@ -1,1 +1,2 @@
 export const RESTORE_TOKEN = 'RESTORE_TOKEN';
+export const CHANGE_LANGUAGE = 'CHANGE_LANUAGE';

@@ -11,6 +11,7 @@ const Provider = ({ children }: any) => {
         user: null,
         library: null,
         suggestions: null,
+        language: 'en',
     };
     const [state, dispatch] = useReducer(reducer, initialState);
     return (
