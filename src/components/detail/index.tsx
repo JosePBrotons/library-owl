@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { ScrollView } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { ActivityIndicator, ScrollView } from 'react-native';
 import { styles } from './styles';
 import { IRouteParams } from './interface';
 import { useAppContext } from '../../hooks';
@@ -12,6 +12,11 @@ import DetailCard from './components/detailCard';
 import { IDetailCard } from './components/detailCard/interface';
 import CommentsCard from './components/commentsCard';
 import { IComment } from './components/commentsCard/interface';
+import { useAsyncStorage } from '@react-native-async-storage/async-storage';
+import { rentalsKey } from '../../constants';
+import { SET_RENTAL } from '../../context/flux/types/behavior';
+import Modal from '../common/modal';
+import I18n from 'i18n-js';
 
 const fetchSuggestions = async (genre: string, dispatch: any) => {
     await dispatch({
@@ -20,8 +25,49 @@ const fetchSuggestions = async (genre: string, dispatch: any) => {
     });
 };
 
-const renderDetailCard = (params: IDetailCard | {}) => {
-    return <DetailCard {...params} />;
+const onRent = (
+    rentals: Array<IDetailCard>,
+    bookInfo: IDetailCard | {},
+    dispatch: any,
+    setItem: any,
+    setRented: React.Dispatch<React.SetStateAction<boolean>>,
+    setJustRented: React.Dispatch<React.SetStateAction<boolean>>,
+    alreadyRented: boolean
+) => async () => {
+    if (!alreadyRented) {
+        const payload = [...rentals, bookInfo];
+        await setItem(JSON.stringify(payload));
+        await dispatch({ type: SET_RENTAL, payload });
+        setRented(true);
+        return;
+    }
+    setJustRented(true);
+};
+
+const renderDetailCard = (
+    params: IDetailCard | {},
+    rentals: Array<any>,
+    dispatch: any,
+    setItem: any,
+    setRented: React.Dispatch<React.SetStateAction<boolean>>,
+    setJustRented: React.Dispatch<React.SetStateAction<boolean>>,
+    alreadyRented: boolean
+) => {
+    return (
+        <DetailCard
+            onRent={onRent(
+                rentals,
+                params,
+                dispatch,
+                setItem,
+                setRented,
+                setJustRented,
+                alreadyRented
+            )}
+            alreadyRented={alreadyRented}
+            {...params}
+        />
+    );
 };
 
 const getSuggestions = (suggestions: Array<IRouteParams>, bookId: number) => {
@@ -30,13 +76,24 @@ const getSuggestions = (suggestions: Array<IRouteParams>, bookId: number) => {
         : [];
 };
 
+const renderModal = (title: string, message: string, onPress: any) => {
+    return <Modal title={title} message={message} onPress={onPress} />;
+};
+
 const renderSuggestions = (
     suggestions: Array<IRouteParams>,
     genre: string,
-    bookId: number
+    bookId: number,
+    loading: boolean
 ) => {
     const arrSuggestions = getSuggestions(suggestions, bookId);
-    return (
+    return loading ? (
+        <ActivityIndicator
+            style={styles.loading}
+            color={styles.loading.color}
+            size={'large'}
+        />
+    ) : (
         isArrayLength(arrSuggestions, 'greater', 0) && (
             <Suggestions
                 suggestions={suggestions}
@@ -56,18 +113,44 @@ const renderComments = (comments: Array<IComment>) => {
 };
 const Detail = () => {
     const { params = {} } = { ...useRoute() };
+    const [rented, setRented] = useState(false);
+    const [justRented, setJustRented] = useState(false);
     const { id = 0, genre = '', comments = [] } = { ...params };
     const [state, dispatch] = useAppContext();
-    const { suggestions = [] } = { ...state };
+    const { suggestions = [], loading = false, rentals = [] } = { ...state };
+    const { setItem } = useAsyncStorage(rentalsKey);
+    const alreadyRented = Boolean(rentals.find((rentals) => rentals.id === id));
     useEffect(() => {
         fetchSuggestions(genre, dispatch);
     }, []);
     return (
-        <ScrollView style={styles.container}>
-            {renderDetailCard(params)}
-            {renderSuggestions(suggestions, genre, id)}
-            {renderComments(comments)}
-        </ScrollView>
+        <>
+            {justRented &&
+                renderModal(
+                    I18n.t('bookDetail.rentedAlready'),
+                    I18n.t('bookDetail.rentedAlreadyMsg'),
+                    () => setJustRented(false)
+                )}
+            {rented &&
+                renderModal(
+                    I18n.t('bookDetail.bookRented'),
+                    I18n.t('bookDetail.rentedSuccessful'),
+                    () => setRented(false)
+                )}
+            <ScrollView style={styles.container}>
+                {renderDetailCard(
+                    params,
+                    rentals,
+                    dispatch,
+                    setItem,
+                    setRented,
+                    setJustRented,
+                    alreadyRented
+                )}
+                {renderSuggestions(suggestions, genre, id, loading)}
+                {renderComments(comments)}
+            </ScrollView>
+        </>
     );
 };
 

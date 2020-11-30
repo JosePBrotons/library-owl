@@ -3,8 +3,11 @@ import React from 'react';
 import { Image, Text, View } from 'react-native';
 import Button from '../../../common/button';
 import Card from '../../../common/card';
-import { styles } from '../../styles';
+import { styles } from './styles';
 import { IDetailCard } from './interface';
+import { isValueLength } from '../../../../utils';
+import { useAsyncStorage } from '@react-native-async-storage/async-storage';
+import { rentalsKey } from '../../../../constants';
 
 const renderDetailContainer = (
     title: string,
@@ -12,9 +15,13 @@ const renderDetailContainer = (
     year: string,
     genre: string
 ) => {
+    const titleLines = isValueLength(title.length, 'greater', 15) ? 2 : 1;
     return (
         <View style={styles.infoContainer}>
-            <Text style={styles.title} ellipsizeMode={'tail'} numberOfLines={2}>
+            <Text
+                style={styles.title}
+                ellipsizeMode={'tail'}
+                numberOfLines={titleLines}>
                 {title}
             </Text>
             <Text style={styles.available}>
@@ -39,7 +46,7 @@ const renderDetailContainer = (
     );
 };
 
-const renderActions = () => {
+const renderActions = (onRent: any, alreadyRented: boolean) => {
     return (
         <View style={styles.btnContainer}>
             <Button
@@ -49,8 +56,10 @@ const renderActions = () => {
                 disabled={false}
             />
             <Button
-                onPress={() => null}
-                text={I18n.t('bookDetail.rent')}
+                onPress={() => onRent()}
+                text={I18n.t(
+                    alreadyRented ? 'bookDetail.rented' : 'bookDetail.rent'
+                )}
                 disabled={false}
             />
         </View>
@@ -58,7 +67,15 @@ const renderActions = () => {
 };
 
 const DetailCard = (props: IDetailCard | {}) => {
-    const { author = '', image_url = '', title = '', year = '', genre = '' } = {
+    const {
+        author = '',
+        image_url = '',
+        title = '',
+        year = '',
+        genre = '',
+        onRent,
+        alreadyRented = false,
+    } = {
         ...props,
     };
     return (
@@ -67,7 +84,7 @@ const DetailCard = (props: IDetailCard | {}) => {
                 <Image source={{ uri: image_url }} style={styles.image} />
                 {renderDetailContainer(title, author, year, genre)}
             </View>
-            {renderActions()}
+            {renderActions(onRent, alreadyRented)}
         </Card>
     );
 };

@@ -6,4 +6,6 @@ export interface IDetailCard {
     publisher: string;
     year: string;
     image_url: string;
+    onRent: any;
+    alreadyRented?: boolean;
 }
