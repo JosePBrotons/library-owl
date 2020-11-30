@@ -1,6 +1,8 @@
 import { useRoute } from '@react-navigation/native';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FlatList } from 'react-native';
+import { analyticsManager } from '../../core/analytics';
+import events from '../../events';
 import Card from '../common/card';
 import Comment from '../detail/components/commentsCard/components/comment';
 import { IComment } from '../detail/components/commentsCard/interface';
@@ -19,9 +21,20 @@ const renderComment = ({ item }) => {
     );
 };
 
+const trackComments = async () => {
+    const evenData = {
+        eventName: events.comments.commentsDetail,
+        properties: null,
+    };
+    await analyticsManager.trackEvent(evenData);
+};
+
 const Comments = () => {
     const { params = {} } = useRoute();
     const { comments = [] } = { ...params };
+    useEffect(() => {
+        trackComments();
+    }, []);
     return (
         <FlatList
             style={styles.container}

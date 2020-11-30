@@ -17,6 +17,8 @@ import { rentalsKey } from '../../constants';
 import { SET_RENTAL } from '../../context/flux/types/behavior';
 import Modal from '../common/modal';
 import I18n from 'i18n-js';
+import { analyticsManager } from '../../core/analytics';
+import events from '../../events';
 
 const fetchSuggestions = async (genre: string, dispatch: any) => {
     await dispatch({
@@ -38,6 +40,10 @@ const onRent = (
         const payload = [...rentals, bookInfo];
         await setItem(JSON.stringify(payload));
         await dispatch({ type: SET_RENTAL, payload });
+        await analyticsManager.trackEvent({
+            eventName: events.bookDetail.rentedBook,
+            properties: { ...bookInfo },
+        });
         setRented(true);
         return;
     }
@@ -111,6 +117,14 @@ const renderComments = (comments: Array<IComment>) => {
         )
     );
 };
+
+const trackBookDetail = async (params: any) => {
+    const eventData = {
+        eventName: events.bookDetail.bookDetail,
+        properties: params,
+    };
+    await analyticsManager.trackEvent(eventData);
+};
 const Detail = () => {
     const { params = {} } = { ...useRoute() };
     const [rented, setRented] = useState(false);
@@ -122,6 +136,7 @@ const Detail = () => {
     const alreadyRented = Boolean(rentals.find((rentals) => rentals.id === id));
     useEffect(() => {
         fetchSuggestions(genre, dispatch);
+        trackBookDetail(params);
     }, []);
     return (
         <>
