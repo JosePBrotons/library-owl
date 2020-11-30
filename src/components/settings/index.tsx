@@ -46,7 +46,7 @@ const onLogout = (navDispatch: any, dispatch) => {
         await dispatch({ type: CLEAR_ALL });
         await analyticsManager.trackEvent({
             eventName: events.login.logOut,
-            properties: null,
+            properties: {},
         });
         navDispatch(StackActions.popToTop());
     };

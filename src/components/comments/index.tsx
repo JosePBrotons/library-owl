@@ -24,7 +24,7 @@ const renderComment = ({ item }) => {
 const trackComments = async () => {
     const evenData = {
         eventName: events.comments.commentsDetail,
-        properties: null,
+        properties: {},
     };
     await analyticsManager.trackEvent(evenData);
 };
