@@ -1,5 +1,9 @@
-const restoreTokenSuccess = (state: any, payload: any) => {
+const restoreToken = (state: any, payload: any) => {
     return { ...state, user: payload };
 };
 
-export { restoreTokenSuccess };
+const changeLanguage = (state: any, payload: any) => {
+    return { ...state, language: payload };
+}
+
+export { changeLanguage, restoreToken };

@@ -11,6 +11,9 @@ export const styles = StyleSheet.create({
         backgroundColor: COLORS.lighterBlue,
         alignItems: 'center',
     },
+    scrollContainer: {
+        backgroundColor: COLORS.lighterBlue,
+    },
     name: {
         ...FONTS.h3,
         color: COLORS.darkGray,

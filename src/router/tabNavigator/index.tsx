@@ -2,9 +2,12 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { COLORS, FONTS } from './../../constants/theme';
-import { tabs } from './../routes';
 import { IScreenOptions, ITab, ITabIconProps } from './../interface';
 import { RouteProp } from '@react-navigation/native';
+import Library from '../../components/library';
+import Settings from '../../components/settings';
+import I18n from 'i18n-js';
+import { useAppContext } from '../../hooks';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,7 +22,7 @@ const renderTabIcon = (
     route: RouteProp<Record<string, object | undefined>, string>
 ) => {
     return (props: ITabIconProps) => {
-        const { size = 10, color = 'tomato' } = { ...props };
+        const { size = 10, color = COLORS.blue } = { ...props };
         const { name = '' } = { ...route };
         const iconName = getTabIconByRouteName(name);
         return <FontAwesome name={iconName} size={size} color={color} />;
@@ -47,6 +50,20 @@ const renderTabs = (tabs: Array<ITab>) =>
     ));
 
 const TabNavigator = () => {
+    const [state] = useAppContext();
+    const tabs: Array<ITab> = [
+        {
+            name: 'Library',
+            component: Library,
+            options: { title: I18n.t('global.library') },
+        },
+        {
+            name: 'Settings',
+            component: Settings,
+            options: { title: I18n.t('global.settings') },
+        },
+    ];
+
     return (
         <Tab.Navigator
             screenOptions={getScreenOptions}

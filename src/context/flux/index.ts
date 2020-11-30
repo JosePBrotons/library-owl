@@ -1,4 +1,4 @@
-import { restoreTokenSuccess } from './actions/behavior';
+import { changeLanguage, restoreToken } from './actions/behavior';
 import {
     fetchData,
     libraryFailure,
@@ -8,7 +8,7 @@ import {
     suggestionsFailure,
     suggestionsSuccess,
 } from './actions/request';
-import { RESTORE_TOKEN } from './types/behavior';
+import { CHANGE_LANGUAGE, RESTORE_TOKEN } from './types/behavior';
 import {
     FETCHING_DATA,
     FETCH_LIBRARY_FAILURE,
@@ -34,7 +34,8 @@ const reducers: any = {
     [FETCH_SUGGESTION_FAILURE]: (state: any, payload: any) =>
         suggestionsFailure(state, payload),
     [RESTORE_TOKEN]: (state: any, payload: any) =>
-        restoreTokenSuccess(state, payload),
+        restoreToken(state, payload),
+    [CHANGE_LANGUAGE]: (state: any, payload: any) => changeLanguage(state, payload),
     DEFAULT: (state: any) => state,
 };
 export default function reducer(state: any, action: any) {

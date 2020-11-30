@@ -19,8 +19,9 @@ const renderStack = (stacks: Array<IStack>, Stack: any) =>
 const restoreUserInfo = async (dispatch: any, getItem: any) => {
     const token = await getItem();
     if (!!token) {
-        const { payload = null } = await tokenizerManager.decode(token);
-        await dispatch({ type: RESTORE_TOKEN, payload });
+        const { payload = {} } = await tokenizerManager.decode(token);
+        const { iss = '' } = { ...payload }
+        await dispatch({ type: RESTORE_TOKEN, payload: JSON.parse(iss) });
     }
 };
 const Router = () => {
