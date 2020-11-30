@@ -183,7 +183,7 @@ const trackLogin = async (eventData: IEventData) => {
     await analyticsManager.trackEvent(eventData);
 };
 
-const saveSession = async (token: string, setItem) => {
+const saveSession = async (token: string, setItem: any) => {
     await setItem(token);
 };
 
