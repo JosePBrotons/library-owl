@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         marginTop: 5,
         marginBottom: 10,
+        paddingHorizontal: 10,
     },
     flat: {
         width: '70%',
@@ -25,6 +26,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         marginTop: 5,
         marginBottom: 10,
+        paddingHorizontal: 10,
     },
     btnText: {
         ...FONTS.h3,
