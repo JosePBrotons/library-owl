@@ -1,10 +1,12 @@
 import { useNavigation } from '@react-navigation/native';
+import I18n from 'i18n-js';
 import React, { useEffect } from 'react';
-import { FlatList, TouchableOpacity } from 'react-native';
+import { FlatList, Text, TouchableOpacity } from 'react-native';
 import { FETCHING_DATA } from '../../context/flux/types/request';
 import { useAppContext } from '../../hooks';
 import { isArrayLength } from '../../utils';
 import BooksCard from '../common/card/components/booksCard';
+import Navbar from '../common/navbar';
 import { FETCH_LIBRARY } from './api';
 import { IBook } from './interface';
 import { styles } from './styles';
@@ -40,19 +42,28 @@ const renderBookCard = (navigate: any) => {
 const Library = () => {
     const { navigate } = { ...useNavigation() };
     const [state, dispatch] = useAppContext();
-    const { loading, library = [] } = { ...state };
+    const { library = [] } = { ...state };
     useEffect(() => {
         fetchAvailableBooks(dispatch);
     }, []);
     const availableBooks = isArrayLength(library, 'greater', 0) ? library : [];
     return (
-        <FlatList
-            data={availableBooks}
-            showsVerticalScrollIndicator={false}
-            keyExtractor={keyExtract}
-            style={styles.container}
-            renderItem={renderBookCard(navigate)}
-        />
+        <>
+            <Navbar
+                leftButton={{ icon: 'bell', action: () => null }}
+                rightButton={{ icon: 'search', action: () => null }}>
+                <Text style={styles.navBarTitle}>
+                    {I18n.t('global.library').toUpperCase()}
+                </Text>
+            </Navbar>
+            <FlatList
+                data={availableBooks}
+                showsVerticalScrollIndicator={false}
+                keyExtractor={keyExtract}
+                style={styles.container}
+                renderItem={renderBookCard(navigate)}
+            />
+        </>
     );
 };
 

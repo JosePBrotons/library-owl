@@ -17,16 +17,20 @@ export const stack: Array<IStack> = [
     {
         name: 'Home',
         component: TabNavigator,
-        options: { title: I18n.t('global.library') },
+        options: {
+            title: I18n.t('global.library'),
+            headerShown: false,
+            gestureEnabled: false,
+        },
     },
     {
         name: 'Detail',
         component: Detail,
-        options: { title: I18n.t('global.detail') },
+        options: { title: I18n.t('global.detail'), headerShown: false },
     },
     {
         name: 'Comments',
         component: Comments,
-        options: { title: I18n.t('global.comments') },
+        options: { title: I18n.t('global.comments'), headerShown: false },
     },
 ];

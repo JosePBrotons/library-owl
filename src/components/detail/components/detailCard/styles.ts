@@ -9,9 +9,11 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingHorizontal: 20,
+        width: '100%',
     },
     infoContainer: {
         alignItems: 'flex-start',
+        width: '70%',
     },
     btnContainer: {
         flexDirection: 'column',
@@ -25,7 +27,6 @@ export const styles = StyleSheet.create({
     },
     title: {
         ...FONTS.h3,
-        width: '100%',
         color: COLORS.darkGray,
     },
     available: {

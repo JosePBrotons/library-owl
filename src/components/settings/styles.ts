@@ -28,11 +28,16 @@ export const styles = StyleSheet.create({
         marginBottom: 20,
     },
     profileImg: {
-        height: 150,
-        width: 150,
+        height: 120,
+        width: 120,
         borderRadius: 300,
         marginVertical: 20,
         borderColor: COLORS.blue,
         borderWidth: 2,
+    },
+    navBarTitle: {
+        ...FONTS.h2,
+        color: COLORS.white,
+        textAlign: 'center',
     },
 });

@@ -1,7 +1,7 @@
 import { StackActions, useNavigation } from '@react-navigation/native';
 import I18n from 'i18n-js';
 import React from 'react';
-import { Image, SafeAreaView, Text } from 'react-native';
+import { Image, ScrollView, Text, View } from 'react-native';
 import { CHANGE_LANGUAGE, CLEAR_ALL } from '../../context/flux/types/behavior';
 import { analyticsManager } from '../../core/analytics';
 import events from '../../events';
@@ -9,6 +9,7 @@ import { useAppContext } from '../../hooks';
 import { setI18nConfig } from '../../i18n';
 import { clearData } from '../../utils';
 import Button from '../common/button';
+import Navbar from '../common/navbar';
 import { IUser } from './interface';
 import { styles } from './styles';
 
@@ -89,10 +90,19 @@ const Settings = () => {
     const { dispatch: navDispatch } = useNavigation();
     const { user = {} } = { ...state };
     return (
-        <SafeAreaView style={styles.container}>
-            {renderUserInfo(user)}
-            {renderActionButtons(navDispatch, dispatch)}
-        </SafeAreaView>
+        <>
+            <Navbar>
+                <Text style={styles.navBarTitle}>
+                    {I18n.t('global.settings').toUpperCase()}
+                </Text>
+            </Navbar>
+            <ScrollView style={styles.scrollContainer}>
+                <View style={styles.container}>
+                    {renderUserInfo(user)}
+                    {renderActionButtons(navDispatch, dispatch)}
+                </View>
+            </ScrollView>
+        </>
     );
 };
 

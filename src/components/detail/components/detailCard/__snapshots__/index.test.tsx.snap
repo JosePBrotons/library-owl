@@ -28,6 +28,7 @@ exports[`renders book´s detail card component correctly 1`] = `
         "flexDirection": "row",
         "justifyContent": "center",
         "paddingHorizontal": 20,
+        "width": "100%",
       }
     }
   >
@@ -49,6 +50,7 @@ exports[`renders book´s detail card component correctly 1`] = `
       style={
         Object {
           "alignItems": "flex-start",
+          "width": "70%",
         }
       }
     >
@@ -61,7 +63,6 @@ exports[`renders book´s detail card component correctly 1`] = `
             "fontFamily": "Nunito-Bold",
             "fontSize": 16,
             "lineHeight": 22,
-            "width": "100%",
           }
         }
       >

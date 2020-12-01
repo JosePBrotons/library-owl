@@ -46,6 +46,7 @@ exports[`renders book detail component correctly 1`] = `
       style={
         Object {
           "justifyContent": "flex-start",
+          "width": "70%",
         }
       }
     >

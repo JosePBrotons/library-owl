@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { FONTS } from '../../constants/theme';
 import { theme } from './../../constants';
 
 const { COLORS } = theme;
@@ -9,5 +10,10 @@ export const styles = StyleSheet.create({
         flexDirection: 'column',
         paddingHorizontal: 20,
         backgroundColor: COLORS.lighterBlue,
+    },
+    navBarTitle: {
+        ...FONTS.h2,
+        color: COLORS.white,
+        textAlign: 'center',
     },
 });

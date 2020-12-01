@@ -29,4 +29,9 @@ export const styles = StyleSheet.create({
         height: 150,
         width: 150,
     },
+    navBarTitle: {
+        ...FONTS.h2,
+        color: COLORS.white,
+        textAlign: 'center',
+    },
 });
