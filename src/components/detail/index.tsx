@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { ActivityIndicator, ScrollView } from 'react-native';
+import { ActivityIndicator, ScrollView, Text } from 'react-native';
 import { styles } from './styles';
 import { IRouteParams } from './interface';
 import { useAppContext } from '../../hooks';
 import { FETCHING_DATA } from '../../context/flux/types/request';
 import { FETCH_SUGGESTIONS } from './api';
 import { isArrayLength } from '../../utils';
-import { useRoute } from '@react-navigation/native';
+import {
+    StackActions,
+    useNavigation,
+    useRoute,
+} from '@react-navigation/native';
 import Suggestions from './components/suggestions';
 import DetailCard from './components/detailCard';
 import { IDetailCard } from './components/detailCard/interface';
@@ -19,6 +23,7 @@ import Modal from '../common/modal';
 import I18n from 'i18n-js';
 import { analyticsManager } from '../../core/analytics';
 import events from '../../events';
+import Navbar from '../common/navbar';
 
 const fetchSuggestions = async (genre: string, dispatch: any) => {
     await dispatch({
@@ -127,6 +132,7 @@ const trackBookDetail = async (params: any) => {
 };
 const Detail = () => {
     const { params = {} } = { ...useRoute() };
+    const { navigate } = useNavigation();
     const [rented, setRented] = useState(false);
     const [justRented, setJustRented] = useState(false);
     const { id = 0, genre = '', comments = [] } = { ...params };
@@ -134,6 +140,10 @@ const Detail = () => {
     const { suggestions = [], loading = false, rentals = [] } = { ...state };
     const { setItem } = useAsyncStorage(rentalsKey);
     const alreadyRented = Boolean(rentals.find((rentals) => rentals.id === id));
+    const leftBtn = {
+        action: () => navigate('Library'),
+        icon: 'chevron-left',
+    };
     useEffect(() => {
         fetchSuggestions(genre, dispatch);
         trackBookDetail(params);
@@ -152,7 +162,14 @@ const Detail = () => {
                     I18n.t('bookDetail.rentedSuccessful'),
                     () => setRented(false)
                 )}
-            <ScrollView style={styles.container}>
+            <Navbar leftButton={leftBtn}>
+                <Text style={styles.navBarTitle}>
+                    {I18n.t('global.detail').toUpperCase()}
+                </Text>
+            </Navbar>
+            <ScrollView
+                showsVerticalScrollIndicator={false}
+                style={styles.container}>
                 {renderDetailCard(
                     params,
                     rentals,

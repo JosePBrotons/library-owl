@@ -10,50 +10,13 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 20,
         backgroundColor: COLORS.lighterBlue,
     },
-    detailContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    infoContainer: {
-        alignItems: 'flex-start',
-        paddingHorizontal: 20,
-    },
-    btnContainer: {
-        flexDirection: 'column',
-        marginVertical: 15,
-        alignItems: 'center',
-    },
-    suggestionsContainer: {
-        marginHorizontal: 10,
-    },
-    image: {
-        width: 70,
-        height: 100,
-    },
     loading: {
         color: COLORS.blue,
         marginVertical: 10,
     },
-    title: {
-        ...FONTS.h3,
-        width: '80%',
-        color: COLORS.darkGray,
-    },
-    available: {
-        ...FONTS.body3,
-        color: COLORS.green,
-    },
-    author: {
-        ...FONTS.body4,
-        color: COLORS.gray,
-    },
-    publish: {
-        ...FONTS.body4,
-        color: COLORS.gray,
-    },
-    genre: {
-        ...FONTS.body4,
-        color: COLORS.gray,
+    navBarTitle: {
+        ...FONTS.h2,
+        color: COLORS.white,
+        textAlign: 'center',
     },
 });

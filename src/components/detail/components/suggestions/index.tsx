@@ -4,7 +4,7 @@ import React from 'react';
 import { FlatList, Image, Text, TouchableOpacity } from 'react-native';
 import Card from '../../../common/card';
 import { IRouteParams } from '../../interface';
-import { styles } from '../../styles';
+import { styles } from './styles';
 import { ISuggestionsProps } from './interface';
 
 const keyExtract = (book: IRouteParams) => {

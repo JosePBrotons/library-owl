@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
     },
     infoContainer: {
         justifyContent: 'flex-start',
+        width: '70%',
     },
     image: {
         width: 60,
