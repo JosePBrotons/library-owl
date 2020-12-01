@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders card component correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(235, 246, 251, 1)",
+      "height": 110,
+    }
+  }
+>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../src/assets/img/navbar.png",
+      }
+    }
+    style={
+      Object {
+        "height": 111,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginVertical": 33,
+        "paddingHorizontal": 20,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 20,
+          "width": 20,
+        }
+      }
+    />
+    <Text>
+      [missing "en.global.settings" translation]
+    </Text>
+    <View
+      style={
+        Object {
+          "height": 20,
+          "width": 20,
+        }
+      }
+    />
+  </View>
+</View>
+`;
