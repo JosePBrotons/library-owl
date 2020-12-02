@@ -6,11 +6,7 @@ import { useAppContext } from '../../hooks';
 import { FETCHING_DATA } from '../../context/flux/types/request';
 import { FETCH_SUGGESTIONS } from './api';
 import { isArrayLength } from '../../utils';
-import {
-    StackActions,
-    useNavigation,
-    useRoute,
-} from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import Suggestions from './components/suggestions';
 import DetailCard from './components/detailCard';
 import { IDetailCard } from './components/detailCard/interface';

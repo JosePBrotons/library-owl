@@ -2,11 +2,13 @@ import { useNavigation } from '@react-navigation/native';
 import I18n from 'i18n-js';
 import React, { useEffect, useState } from 'react';
 import { FlatList, Text, TouchableOpacity, View } from 'react-native';
+import { useNetInfo } from '@react-native-community/netinfo';
 import { COLORS } from '../../constants';
 import { FETCHING_DATA } from '../../context/flux/types/request';
 import { httpManager } from '../../core/http_manager';
-import { useAppContext, useRemoveNavDefault } from '../../hooks';
+import { useAppContext } from '../../hooks';
 import { isArrayLength, isBlank, isSafeDataType } from '../../utils';
+import ActivityBar from '../common/activityBar';
 import BooksCard from '../common/card/components/booksCard';
 import Input from '../common/input';
 import LoadingHOC from '../common/loading';
@@ -31,11 +33,12 @@ const keyExtract = (book: IBook) => {
     return `${bookId}`;
 };
 
-const renderBookCard = (navigate: any) => {
+const renderBookCard = (navigate: any, isConnected: boolean) => {
     return ({ item }) => {
         return (
             <TouchableOpacity
                 activeOpacity={0.5}
+                disabled={!isConnected}
                 onPress={goToScreen(navigate, 'Detail', item)}>
                 <BooksCard {...item} />
             </TouchableOpacity>
@@ -108,9 +111,21 @@ const renderLeftNavButton = (showSearch: boolean) => {
 
 const FullScreenLoadingHOC = LoadingHOC(View);
 
+const renderActivityBar = (isConnected: boolean) => {
+    return (
+        !isConnected && (
+            <ActivityBar
+                icon={'wifi-off'}
+                text={I18n.t('global.noConnection')}
+            />
+        )
+    );
+};
+
 const Library = () => {
     const navigation = useNavigation();
     const { navigate } = { ...navigation };
+    const { isConnected = false } = useNetInfo();
     const [state, dispatch] = useAppContext();
     const [showSearch, setShowSearch] = useState(false);
     const [results, setResults] = useState(null);
@@ -119,33 +134,37 @@ const Library = () => {
     useEffect(() => {
         fetchAvailableBooks(dispatch);
     }, []);
-    useRemoveNavDefault(navigation);
     const availableBooks = isArrayLength(library, 'greater', 0) ? library : [];
     return (
-        <FullScreenLoadingHOC loading={loading} style={styles.loadingContainer}>
-            <Navbar
-                leftButton={renderLeftNavButton(showSearch)}
-                rightButton={getNavRightButton(
-                    showSearch,
-                    setShowSearch,
-                    setBookTitle,
-                    setResults
-                )}>
-                {renderNavbarChildren(
-                    showSearch,
-                    bookTitle,
-                    setBookTitle,
-                    setResults
-                )}
-            </Navbar>
-            <FlatList
-                data={isSafeDataType(results) ? results : availableBooks}
-                showsVerticalScrollIndicator={false}
-                keyExtractor={keyExtract}
-                style={styles.container}
-                renderItem={renderBookCard(navigate)}
-            />
-        </FullScreenLoadingHOC>
+        <>
+            <FullScreenLoadingHOC
+                loading={loading}
+                style={styles.loadingContainer}>
+                <Navbar
+                    leftButton={renderLeftNavButton(showSearch)}
+                    rightButton={getNavRightButton(
+                        showSearch,
+                        setShowSearch,
+                        setBookTitle,
+                        setResults
+                    )}>
+                    {renderNavbarChildren(
+                        showSearch,
+                        bookTitle,
+                        setBookTitle,
+                        setResults
+                    )}
+                </Navbar>
+                <FlatList
+                    data={isSafeDataType(results) ? results : availableBooks}
+                    showsVerticalScrollIndicator={false}
+                    keyExtractor={keyExtract}
+                    style={styles.container}
+                    renderItem={renderBookCard(navigate, isConnected)}
+                />
+            </FullScreenLoadingHOC>
+            {renderActivityBar(isConnected)}
+        </>
     );
 };
 

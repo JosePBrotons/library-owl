@@ -2,16 +2,18 @@ import { StackActions, useNavigation } from '@react-navigation/native';
 import I18n from 'i18n-js';
 import React from 'react';
 import { Image, ScrollView, Text, View } from 'react-native';
+import { useNetInfo } from '@react-native-community/netinfo';
 import { CHANGE_LANGUAGE, CLEAR_ALL } from '../../context/flux/types/behavior';
 import { analyticsManager } from '../../core/analytics';
 import events from '../../events';
-import { useAppContext, useRemoveNavDefault } from '../../hooks';
+import { useAppContext } from '../../hooks';
 import { setI18nConfig } from '../../i18n';
 import { clearData } from '../../utils';
 import Button from '../common/button';
 import Navbar from '../common/navbar';
 import { IUser } from './interface';
 import { styles } from './styles';
+import ActivityBar from '../common/activityBar';
 
 const DEFAULT_IMG_URL: string =
     'https://images.unsplash.com/photo-1558945657-484aa38065ec?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjZ8fG93bHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=900&q=60';
@@ -85,12 +87,23 @@ const renderActionButtons = (navDispatch: any, dispatch: any) => {
     );
 };
 
+const renderActivityBar = (isConnected: boolean) => {
+    return (
+        !isConnected && (
+            <ActivityBar
+                icon={'wifi-off'}
+                text={I18n.t('global.noConnection')}
+            />
+        )
+    );
+};
+
 const Settings = () => {
     const navigation = useNavigation();
     const [state, dispatch] = useAppContext();
+    const { isConnected = false } = useNetInfo();
     const { dispatch: navDispatch } = { ...navigation };
     const { user = {} } = { ...state };
-    useRemoveNavDefault(navigation);
     return (
         <>
             <Navbar>
@@ -104,6 +117,7 @@ const Settings = () => {
                     {renderActionButtons(navDispatch, dispatch)}
                 </View>
             </ScrollView>
+            {renderActivityBar(isConnected)}
         </>
     );
 };

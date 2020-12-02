@@ -2,6 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import I18n from 'i18n-js';
 import React, { useEffect } from 'react';
 import { SafeAreaView, ScrollView, Text, View } from 'react-native';
+import { useNetInfo } from '@react-native-community/netinfo';
 import { Formik } from 'formik';
 import { COLORS, emailRegExp, userDataKey } from '../../constants';
 import { arrUpTo, isArrayLength, isBlank, isValueLength } from '../../utils';
@@ -21,6 +22,7 @@ import { IInputProps } from '../common/input/interface';
 import { tokenizerManager } from '../../core/tokenizer';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 import LoadingHOC from '../common/loading';
+import ActivityBar from '../common/activityBar';
 
 const initialFormValues: ILoginForm = {
     firstName: '',
@@ -30,7 +32,7 @@ const initialFormValues: ILoginForm = {
     termsAndConditions: false,
 };
 
-const isDisabled = (form: ILoginForm) => {
+const isDisabled = (form: ILoginForm, isConnected: boolean) => {
     const {
         firstName = '',
         lastName = '',
@@ -43,7 +45,8 @@ const isDisabled = (form: ILoginForm) => {
         !isValueLength(lastName.length, 'greatOrEq', 3) ||
         !emailRegExp.test(email) ||
         isBlank(age) ||
-        !termsAndConditions
+        !termsAndConditions ||
+        !isConnected
     );
 };
 
@@ -82,7 +85,7 @@ const renderInputs = (arrInputData: Array<IInputProps>) => {
     );
 };
 
-const renderLoginForm = (dispatch: any) => {
+const renderLoginForm = (dispatch: any, isConnected: boolean) => {
     return (
         <Formik
             initialValues={initialFormValues}
@@ -153,7 +156,7 @@ const renderLoginForm = (dispatch: any) => {
                         />
                         <Button
                             text={I18n.t('login.signIn')}
-                            disabled={isDisabled(values)}
+                            disabled={isDisabled(values, isConnected)}
                             onPress={handleSubmit}
                         />
                     </View>
@@ -186,8 +189,20 @@ const saveSession = async (token: string, setItem: any) => {
 
 const FullScreenLoadingHOC = LoadingHOC(SafeAreaView);
 
+const renderActivityBar = (isConnected: boolean) => {
+    return (
+        !isConnected && (
+            <ActivityBar
+                icon={'wifi-off'}
+                text={I18n.t('global.noConnection')}
+            />
+        )
+    );
+};
+
 const Login = () => {
     const { navigate } = { ...useNavigation() };
+    const { isConnected = false } = useNetInfo();
     const [state, dispatch] = useAppContext();
     const { setItem } = useAsyncStorage(userDataKey);
     const { user = null, loading = false, multiScroll = true } = { ...state };
@@ -205,15 +220,20 @@ const Login = () => {
         }
     }, [user]);
     return (
-        <FullScreenLoadingHOC loading={loading} style={styles.container}>
-            <ScrollView
-                style={styles.container}
-                showsVerticalScrollIndicator={false}
-                scrollEnabled={multiScroll}>
-                {renderHeader()}
-                {renderLoginForm(dispatch)}
-            </ScrollView>
-        </FullScreenLoadingHOC>
+        <>
+            <FullScreenLoadingHOC
+                loading={loading}
+                style={styles.loadingContainer}>
+                <ScrollView
+                    style={styles.container}
+                    showsVerticalScrollIndicator={false}
+                    scrollEnabled={multiScroll}>
+                    {renderHeader()}
+                    {renderLoginForm(dispatch, isConnected)}
+                </ScrollView>
+            </FullScreenLoadingHOC>
+            {renderActivityBar(isConnected)}
+        </>
     );
 };
 

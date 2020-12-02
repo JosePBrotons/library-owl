@@ -6,13 +6,3 @@ export const useAppContext = () => {
     const state = useContext(StateContext);
     return [state, dispatch];
 };
-
-export const useRemoveNavDefault = (navigation: any) => {
-    useEffect(
-        () =>
-            navigation.addListener('beforeRemove', (event: any) => {
-                event.preventDefault();
-            }),
-        []
-    );
-};
