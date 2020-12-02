@@ -2,6 +2,7 @@ import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import React, { useEffect } from 'react';
+import Splash from 'rnative-splash';
 import { rentalsKey, userDataKey } from '../constants';
 import { GET_RENTALS, RESTORE_TOKEN } from '../context/flux/types/behavior';
 import { tokenizerManager } from '../core/tokenizer';
@@ -23,6 +24,11 @@ const restoreUserInfo = async (dispatch: any, getItem: any) => {
         const { iss = '' } = { ...payload };
         await dispatch({ type: RESTORE_TOKEN, payload: JSON.parse(iss) });
     }
+    Splash.close({
+        animationType: Splash.animationType.scale,
+        duration: 850,
+        delay: 500,
+      });
 };
 
 const restoreRentals = async (rentalsStorage: any, dispatch: any) => {
