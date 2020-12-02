@@ -302,6 +302,8 @@ PODS:
     - React-cxxreact (= 0.63.3)
     - React-jsi (= 0.63.3)
   - React-jsinspector (0.63.3)
+  - react-native-netinfo (5.9.9):
+    - React-Core
   - react-native-pure-jwt (2.2.2):
     - JWT (~> 3.0.0-beta.11)
     - React
@@ -367,6 +369,8 @@ PODS:
     - React-Core (= 0.63.3)
     - React-cxxreact (= 0.63.3)
     - React-jsi (= 0.63.3)
+  - rnative-splash (0.1.0):
+    - React
   - RNCAsyncStorage (1.13.2):
     - React
   - RNCMaskedView (0.1.10):
@@ -429,6 +433,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
+  - "react-native-netinfo (from `../node_modules/@react-native-community/netinfo`)"
   - react-native-pure-jwt (from `../node_modules/react-native-pure-jwt`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -441,6 +446,7 @@ DEPENDENCIES:
   - React-RCTText (from `../node_modules/react-native/Libraries/Text`)
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - rnative-splash (from `../node_modules/rnative-splash`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-async-storage/async-storage`)"
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - "RNFBAnalytics (from `../node_modules/@react-native-firebase/analytics`)"
@@ -510,6 +516,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
+  react-native-netinfo:
+    :path: "../node_modules/@react-native-community/netinfo"
   react-native-pure-jwt:
     :path: "../node_modules/react-native-pure-jwt"
   react-native-safe-area-context:
@@ -534,6 +542,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/Libraries/Vibration"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  rnative-splash:
+    :path: "../node_modules/rnative-splash"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-async-storage/async-storage"
   RNCMaskedView:
@@ -594,6 +604,7 @@ SPEC CHECKSUMS:
   React-jsi: df07aa95b39c5be3e41199921509bfa929ed2b9d
   React-jsiexecutor: b56c03e61c0dd5f5801255f2160a815f4a53d451
   React-jsinspector: 8e68ffbfe23880d3ee9bafa8be2777f60b25cbe2
+  react-native-netinfo: 0212ce8604e88edf686f1481b925b17a42a52449
   react-native-pure-jwt: a89a3d83e5aab5e7da1d9ef2a97f3b908199966b
   react-native-safe-area-context: b6e0e284002381d2ff29fa4fff42b4d8282e3c94
   React-RCTActionSheet: 53ea72699698b0b47a6421cb1c8b4ab215a774aa
@@ -606,6 +617,7 @@ SPEC CHECKSUMS:
   React-RCTText: 65a6de06a7389098ce24340d1d3556015c38f746
   React-RCTVibration: 8e9fb25724a0805107fc1acc9075e26f814df454
   ReactCommon: 4167844018c9ed375cc01a843e9ee564399e53c3
+  rnative-splash: 75256b82d625ef2beb212ae22c9366d6403e4b06
   RNCAsyncStorage: 05bae7ecfab1cbd5441993f1ca098f7c3b3f8d0e
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNFBAnalytics: 0a98aff1ad9abee16de201012f03179246c2e5bb
