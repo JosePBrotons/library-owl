@@ -6,6 +6,7 @@ import { INavbarProps } from './interface';
 import { styles } from './styles';
 
 const navbarBackground = require('./../../../assets/img/navbar.png');
+const hitSlop = { top: 20, bottom: 20, left: 30, right: 30 };
 
 const Navbar = (props: INavbarProps) => {
     const { children, leftButton = null, rightButton = null } = { ...props };
@@ -22,7 +23,10 @@ const Navbar = (props: INavbarProps) => {
                 {!isSafeDataType(leftButton) ? (
                     <View style={styles.empty} />
                 ) : (
-                    <TouchableOpacity onPress={leftAction} activeOpacity={0.9}>
+                    <TouchableOpacity
+                        onPress={leftAction}
+                        activeOpacity={0.9}
+                        hitSlop={hitSlop}>
                         <FontAwesome
                             name={leftIcon}
                             size={20}
@@ -34,7 +38,10 @@ const Navbar = (props: INavbarProps) => {
                 {!isSafeDataType(rightButton) ? (
                     <View style={styles.empty} />
                 ) : (
-                    <TouchableOpacity onPress={rightAction} activeOpacity={0.9}>
+                    <TouchableOpacity
+                        onPress={rightAction}
+                        activeOpacity={0.9}
+                        hitSlop={hitSlop}>
                         <FontAwesome
                             name={rightIcon}
                             size={20}
