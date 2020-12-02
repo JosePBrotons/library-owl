@@ -12,6 +12,7 @@ export const initialState = {
     suggestions: null,
     rentals: [],
     language: 'en',
+    multiScroll: true,
 };
 
 const Provider = ({ children }: any) => {

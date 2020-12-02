@@ -20,6 +20,8 @@ exports[`renders login component correctly 1`] = `
     }
   >
     <RCTScrollView
+      scrollEnabled={true}
+      showsVerticalScrollIndicator={false}
       style={
         Object {
           "backgroundColor": "rgba(255, 255, 255, 1)",
@@ -77,17 +79,20 @@ exports[`renders login component correctly 1`] = `
         >
           <View
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgba(248, 248, 248, 1)",
-                "borderRadius": 5,
-                "color": "rgba(69, 69, 69, 1)",
-                "flexDirection": "row",
-                "height": 40,
-                "marginBottom": 20,
-                "paddingHorizontal": 10,
-                "width": "80%",
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgba(248, 248, 248, 1)",
+                  "borderRadius": 5,
+                  "color": "rgba(69, 69, 69, 1)",
+                  "flexDirection": "row",
+                  "height": 40,
+                  "marginBottom": 20,
+                  "paddingHorizontal": 10,
+                  "width": "80%",
+                },
+                Object {},
+              ]
             }
           >
             <TextInput
@@ -113,17 +118,20 @@ exports[`renders login component correctly 1`] = `
           </View>
           <View
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgba(248, 248, 248, 1)",
-                "borderRadius": 5,
-                "color": "rgba(69, 69, 69, 1)",
-                "flexDirection": "row",
-                "height": 40,
-                "marginBottom": 20,
-                "paddingHorizontal": 10,
-                "width": "80%",
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgba(248, 248, 248, 1)",
+                  "borderRadius": 5,
+                  "color": "rgba(69, 69, 69, 1)",
+                  "flexDirection": "row",
+                  "height": 40,
+                  "marginBottom": 20,
+                  "paddingHorizontal": 10,
+                  "width": "80%",
+                },
+                Object {},
+              ]
             }
           >
             <TextInput
@@ -149,17 +157,20 @@ exports[`renders login component correctly 1`] = `
           </View>
           <View
             style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "rgba(248, 248, 248, 1)",
-                "borderRadius": 5,
-                "color": "rgba(69, 69, 69, 1)",
-                "flexDirection": "row",
-                "height": 40,
-                "marginBottom": 20,
-                "paddingHorizontal": 10,
-                "width": "80%",
-              }
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgba(248, 248, 248, 1)",
+                  "borderRadius": 5,
+                  "color": "rgba(69, 69, 69, 1)",
+                  "flexDirection": "row",
+                  "height": 40,
+                  "marginBottom": 20,
+                  "paddingHorizontal": 10,
+                  "width": "80%",
+                },
+                Object {},
+              ]
             }
           >
             <TextInput
