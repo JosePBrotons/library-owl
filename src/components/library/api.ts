@@ -5,10 +5,16 @@ import {
 
 export const FETCH_LIBRARY = () => {
     return {
-        url:
-            'https://my-json-server.typicode.com/josepbrotons/owls-library-rest/books',
+        url: 'https://owls-library.herokuapp.com/books',
         method: 'GET',
         success: FETCH_LIBRARY_SUCCESS,
         failure: FETCH_LIBRARY_FAILURE,
+    };
+};
+
+export const SEARCH_BOOK = (bookTitle: string) => {
+    return {
+        url: `https://owls-library.herokuapp.com/books?title=${bookTitle}`,
+        method: 'GET',
     };
 };
