@@ -27,6 +27,7 @@
 		8FF7D9E49E40457BAE078F2B /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 928D9F2EBC394110B43785A3 /* Nunito-BoldItalic.ttf */; };
 		99716AEE5F7E40778396F096 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 626DF3BF97454675A4979686 /* Nunito-ExtraBold.ttf */; };
 		A452089313DF442AB434C4B7 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E75C49727E164BCA9C06F1A3 /* Nunito-Black.ttf */; };
+		AA03FEB82577411700CFF9EE /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = AA03FEB72577411600CFF9EE /* splash.png */; };
 		AA06ED78256E15630051AD21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA06ED77256E15630051AD21 /* GoogleService-Info.plist */; };
 		AA36BE6F256B2D1600BB4943 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA36BE6E256B2D1600BB4943 /* File.swift */; };
 		AAD53A8D256B20EC00CF6944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD53A8C256B20EC00CF6944 /* LaunchScreen.storyboard */; };
@@ -88,6 +89,7 @@
 		9BC4D70346D54A408A2F0DB6 /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-LightItalic.ttf"; path = "../src/assets/fonts/Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
 		9D992A0D45FF07D47DA039D5 /* Pods-wolox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wolox.debug.xcconfig"; path = "Target Support Files/Pods-wolox/Pods-wolox.debug.xcconfig"; sourceTree = "<group>"; };
 		A570E023AA08A288179FC8C8 /* libPods-wolox-woloxTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wolox-woloxTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA03FEB72577411600CFF9EE /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = SplashScreenResource/splash.png; sourceTree = "<group>"; };
 		AA06ED77256E15630051AD21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AA36BE6E256B2D1600BB4943 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		AAD53A17256ACDF800CF6944 /* wolox-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "wolox-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				AA03FEB72577411600CFF9EE /* splash.png */,
 				AA06ED77256E15630051AD21 /* GoogleService-Info.plist */,
 				AA36BE6E256B2D1600BB4943 /* File.swift */,
 				13B07FAE1A68108700A75B9A /* wolox */,
@@ -421,6 +424,7 @@
 				C54CAB6407E640548FFF004A /* Nunito-LightItalic.ttf in Resources */,
 				3CA58BBA8E884B3280AC2370 /* Nunito-Regular.ttf in Resources */,
 				C964841419AB465198A91A57 /* Nunito-SemiBold.ttf in Resources */,
+				AA03FEB82577411700CFF9EE /* splash.png in Resources */,
 				212986E452274B0788BE69E1 /* Nunito-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

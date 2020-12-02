@@ -6230,6 +6230,11 @@ rimraf@~2.2.6:
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
   integrity sha1-5Dm+Kq7jJzIZUnMPmaiSnk/FBYI=
 
+rnative-splash@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/rnative-splash/-/rnative-splash-0.1.0.tgz#710353748ca2f112fc1f5abbefe9c777b377032d"
+  integrity sha512-AOqBN7HevyOvt5iXSWiL1j2Om5CkOFG+cS3AMGN0nLKlMC/wLy/GAMfoAYqHDlXk/1qNv8ZaBhTTanksiDf31g==
+
 rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
