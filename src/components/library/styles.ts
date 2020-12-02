@@ -16,4 +16,10 @@ export const styles = StyleSheet.create({
         color: COLORS.white,
         textAlign: 'center',
     },
+    loadingContainer: {
+        flex: 1,
+    },
+    searchInput: {
+        marginBottom: 0,
+    },
 });
