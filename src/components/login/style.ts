@@ -10,6 +10,9 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 40,
         backgroundColor: COLORS.white,
     },
+    loadingContainer: {
+        flex: 1,
+    },
     formContainer: {
         flex: 2,
         alignItems: 'center',

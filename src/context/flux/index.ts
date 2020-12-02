@@ -2,6 +2,7 @@ import {
     changeLanguage,
     clearAll,
     getRentals,
+    handleScroll,
     restoreToken,
     setNewRental,
 } from './actions/behavior';
@@ -18,6 +19,7 @@ import {
     CHANGE_LANGUAGE,
     CLEAR_ALL,
     GET_RENTALS,
+    HANDLE_SCROLL,
     RESTORE_TOKEN,
     SET_RENTAL,
 } from './types/behavior';
@@ -50,6 +52,8 @@ const reducers: any = {
         changeLanguage(state, payload),
     [GET_RENTALS]: (state: any, payload: any) => getRentals(state, payload),
     [SET_RENTAL]: (state: any, payload: any) => setNewRental(state, payload),
+    [HANDLE_SCROLL]: (state: any, payload: boolean) =>
+        handleScroll(state, payload),
     [CLEAR_ALL]: (state: any, payload: any) => clearAll(state, payload),
     DEFAULT: (state: any) => state,
 };

@@ -1,165 +1,195 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders books library component correctly 1`] = `
-Array [
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
   <View
     style={
       Object {
-        "backgroundColor": "rgba(235, 246, 251, 1)",
-        "height": 110,
+        "flex": 1,
       }
     }
   >
-    <Image
-      source={
-        Object {
-          "testUri": "../../../src/assets/img/navbar.png",
-        }
-      }
-      style={
-        Object {
-          "height": 111,
-          "position": "absolute",
-          "top": 0,
-          "width": "100%",
-        }
-      }
-    />
     <View
       style={
         Object {
-          "alignItems": "center",
-          "flex": 1,
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-          "marginVertical": 33,
-          "paddingHorizontal": 20,
+          "backgroundColor": "rgba(235, 246, 251, 1)",
+          "height": 110,
         }
       }
     >
-      <View
-        accessible={true}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/assets/img/navbar.png",
+          }
+        }
         style={
           Object {
-            "opacity": 1,
+            "height": 111,
+            "position": "absolute",
+            "top": 0,
+            "width": "100%",
+          }
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "marginVertical": 33,
+            "paddingHorizontal": 20,
           }
         }
       >
-        <Text
-          allowFontScaling={false}
+        <View
+          accessible={true}
+          focusable={true}
+          hitSlop={
+            Object {
+              "bottom": 20,
+              "left": 30,
+              "right": 30,
+              "top": 20,
+            }
+          }
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
           style={
-            Array [
-              Object {
-                "color": "rgba(255, 255, 255, 1)",
-                "fontSize": 20,
-              },
-              undefined,
-              Object {
-                "fontFamily": "FontAwesome",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "opacity": 1,
+            }
           }
         >
-          
-        </Text>
-      </View>
-      <Text
-        style={
-          Object {
-            "color": "rgba(255, 255, 255, 1)",
-            "fontFamily": "Nunito-Bold",
-            "fontSize": 22,
-            "lineHeight": 30,
-            "textAlign": "center",
-          }
-        }
-      >
-        [MISSING "EN.GLOBAL.LIBRARY" TRANSLATION]
-      </Text>
-      <View
-        accessible={true}
-        focusable={true}
-        onClick={[Function]}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "opacity": 1,
-          }
-        }
-      >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "rgba(255, 255, 255, 1)",
+                  "fontSize": 20,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
         <Text
-          allowFontScaling={false}
           style={
-            Array [
-              Object {
-                "color": "rgba(255, 255, 255, 1)",
-                "fontSize": 20,
-              },
-              undefined,
-              Object {
-                "fontFamily": "FontAwesome",
-                "fontStyle": "normal",
-                "fontWeight": "normal",
-              },
-              Object {},
-            ]
+            Object {
+              "color": "rgba(255, 255, 255, 1)",
+              "fontFamily": "Nunito-Bold",
+              "fontSize": 22,
+              "lineHeight": 30,
+              "textAlign": "center",
+            }
           }
         >
-          
+          [MISSING "EN.GLOBAL.LIBRARY" TRANSLATION]
         </Text>
+        <View
+          accessible={true}
+          focusable={true}
+          hitSlop={
+            Object {
+              "bottom": 20,
+              "left": 30,
+              "right": 30,
+              "top": 20,
+            }
+          }
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "opacity": 1,
+            }
+          }
+        >
+          <Text
+            allowFontScaling={false}
+            style={
+              Array [
+                Object {
+                  "color": "rgba(255, 255, 255, 1)",
+                  "fontSize": 20,
+                },
+                undefined,
+                Object {
+                  "fontFamily": "FontAwesome",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+                Object {},
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
       </View>
     </View>
-  </View>,
-  <RCTScrollView
-    data={Array []}
-    disableVirtualization={false}
-    getItem={[Function]}
-    getItemCount={[Function]}
-    horizontal={false}
-    initialNumToRender={10}
-    keyExtractor={[Function]}
-    maxToRenderPerBatch={10}
-    onContentSizeChange={[Function]}
-    onEndReachedThreshold={2}
-    onLayout={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScroll={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    removeClippedSubviews={false}
-    renderItem={[Function]}
-    scrollEventThrottle={50}
-    showsVerticalScrollIndicator={false}
-    stickyHeaderIndices={Array []}
-    style={
-      Object {
-        "backgroundColor": "rgba(235, 246, 251, 1)",
-        "flex": 1,
-        "flexDirection": "column",
-        "paddingHorizontal": 20,
+    <RCTScrollView
+      data={Array []}
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      showsVerticalScrollIndicator={false}
+      stickyHeaderIndices={Array []}
+      style={
+        Object {
+          "backgroundColor": "rgba(235, 246, 251, 1)",
+          "flex": 1,
+          "flexDirection": "column",
+          "paddingHorizontal": 20,
+        }
       }
-    }
-    updateCellsBatchingPeriod={50}
-    viewabilityConfigCallbackPairs={Array []}
-    windowSize={21}
-  >
-    <View />
-  </RCTScrollView>,
-]
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View />
+    </RCTScrollView>
+  </View>
+</View>
 `;

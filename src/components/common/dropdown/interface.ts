@@ -5,4 +5,5 @@ export interface IDropdownProps {
     fieldName: string;
     options: Array<string | number>;
     optionDescription?: string;
+    isMultiScrollScreen: boolean;
 }

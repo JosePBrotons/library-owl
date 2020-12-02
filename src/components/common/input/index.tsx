@@ -29,17 +29,20 @@ const Input = (props: IInputProps) => {
         placeholderTextColor,
         secureTextEntry = false,
         iconName = '',
+        customStyle = {},
+        onSubmitEditing,
     } = {
         ...props,
     };
     return (
-        <View style={styles.inputView}>
+        <View style={[styles.inputView, customStyle]}>
             {renderIcon(iconName, placeholderTextColor)}
             <TextInput
                 secureTextEntry={secureTextEntry}
                 style={styles.inputText}
                 value={value}
                 placeholder={placeholder}
+                onSubmitEditing={onSubmitEditing}
                 placeholderTextColor={placeholderTextColor}
                 onChangeText={changeTextEvent(onChangeText)}
             />

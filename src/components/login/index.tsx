@@ -139,6 +139,7 @@ const renderLoginForm = (dispatch: any) => {
                             label={I18n.t('login.age')}
                             selectedValue={selectedAge}
                             select={setFieldValue}
+                            isMultiScrollScreen={true}
                             fieldName={'age'}
                         />
                         <CheckBox
@@ -189,7 +190,7 @@ const Login = () => {
     const { navigate } = { ...useNavigation() };
     const [state, dispatch] = useAppContext();
     const { setItem } = useAsyncStorage(userDataKey);
-    const { user = null, loading = false } = { ...state };
+    const { user = null, loading = false, multiScroll = true } = { ...state };
     const { token = '' } = { ...user };
     useEffect(() => {
         if (!!user) {
@@ -205,7 +206,10 @@ const Login = () => {
     }, [user]);
     return (
         <FullScreenLoadingHOC loading={loading} style={styles.container}>
-            <ScrollView style={styles.container}>
+            <ScrollView
+                style={styles.container}
+                showsVerticalScrollIndicator={false}
+                scrollEnabled={multiScroll}>
                 {renderHeader()}
                 {renderLoginForm(dispatch)}
             </ScrollView>

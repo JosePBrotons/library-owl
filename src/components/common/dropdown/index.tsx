@@ -1,6 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FlatList, Text, TouchableOpacity } from 'react-native';
 import { View as AnimatableView } from 'react-native-animatable';
+import { HANDLE_SCROLL } from '../../../context/flux/types/behavior';
+import { useAppContext } from '../../../hooks';
+import { isSafeDataType } from '../../../utils';
 import { IDropdownProps } from './interface';
 import { styles } from './styles';
 
@@ -10,8 +13,9 @@ const onPressToUnfold = (
     dropdownRef: React.MutableRefObject<null>
 ) => {
     return () => {
+        const { current = null } = { ...dropdownRef };
         const unfoldedStyle = unfold ? styles.hidden : styles.expanded;
-        !!dropdownRef && dropdownRef.current.transitionTo(unfoldedStyle);
+        isSafeDataType(current) && current.transitionTo(unfoldedStyle);
         setUnfold(!unfold);
     };
 };
@@ -53,6 +57,10 @@ const keyExtract = (item: string | number) => {
     return `dropdown-id: ${item.toString()}`;
 };
 
+const handleLoginScroll = async (dispatch: any, unfold: boolean) => {
+    await dispatch({ type: HANDLE_SCROLL, payload: !unfold });
+};
+
 const Dropdown = (props: IDropdownProps) => {
     const {
         label = '',
@@ -61,9 +69,14 @@ const Dropdown = (props: IDropdownProps) => {
         select = null,
         fieldName = '',
         optionDescription = '',
+        isMultiScrollScreen = true,
     } = { ...props };
     const [unfold, setUnfold] = useState(false);
+    const [, dispatch] = useAppContext();
     const dropdownRef = useRef(null);
+    useEffect(() => {
+        isMultiScrollScreen && handleLoginScroll(dispatch, unfold);
+    }, [unfold]);
     return (
         <AnimatableView style={styles.container} ref={dropdownRef}>
             <TouchableOpacity

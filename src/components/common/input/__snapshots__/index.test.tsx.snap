@@ -3,17 +3,20 @@
 exports[`renders input component correctly 1`] = `
 <View
   style={
-    Object {
-      "alignItems": "center",
-      "backgroundColor": "rgba(248, 248, 248, 1)",
-      "borderRadius": 5,
-      "color": "rgba(69, 69, 69, 1)",
-      "flexDirection": "row",
-      "height": 40,
-      "marginBottom": 20,
-      "paddingHorizontal": 10,
-      "width": "80%",
-    }
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(248, 248, 248, 1)",
+        "borderRadius": 5,
+        "color": "rgba(69, 69, 69, 1)",
+        "flexDirection": "row",
+        "height": 40,
+        "marginBottom": 20,
+        "paddingHorizontal": 10,
+        "width": "80%",
+      },
+      Object {},
+    ]
   }
 >
   <Text
