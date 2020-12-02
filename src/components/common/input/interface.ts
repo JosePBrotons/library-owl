@@ -1,4 +1,9 @@
-import { ColorValue } from 'react-native';
+import {
+    ColorValue,
+    NativeSyntheticEvent,
+    StyleSheetProperties,
+    TextInputSubmitEditingEventData,
+} from 'react-native';
 
 export interface IInputProps {
     placeholder: string;
@@ -7,4 +12,8 @@ export interface IInputProps {
     onChangeText: any;
     secureTextEntry?: boolean;
     iconName?: string;
+    customStyle?: {};
+    onSubmitEditing?:
+        | ((e: NativeSyntheticEvent<TextInputSubmitEditingEventData>) => void)
+        | undefined;
 }
