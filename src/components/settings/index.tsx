@@ -5,7 +5,7 @@ import { Image, ScrollView, Text, View } from 'react-native';
 import { CHANGE_LANGUAGE, CLEAR_ALL } from '../../context/flux/types/behavior';
 import { analyticsManager } from '../../core/analytics';
 import events from '../../events';
-import { useAppContext } from '../../hooks';
+import { useAppContext, useRemoveNavDefault } from '../../hooks';
 import { setI18nConfig } from '../../i18n';
 import { clearData } from '../../utils';
 import Button from '../common/button';
@@ -86,9 +86,11 @@ const renderActionButtons = (navDispatch: any, dispatch: any) => {
 };
 
 const Settings = () => {
+    const navigation = useNavigation();
     const [state, dispatch] = useAppContext();
-    const { dispatch: navDispatch } = useNavigation();
+    const { dispatch: navDispatch } = { ...navigation };
     const { user = {} } = { ...state };
+    useRemoveNavDefault(navigation);
     return (
         <>
             <Navbar>
