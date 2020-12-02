@@ -8,6 +8,7 @@
         "comments": "Comentarios",
         "loading": "Cargando...",
         "search": "Buscar",
+        "noConnection": "Sin conexión",
         "ok": "Aceptar"
     },
     "login": {

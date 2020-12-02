@@ -8,6 +8,7 @@
         "comments": "Comments",
         "loading": "Loading...",
         "search": "Search",
+        "noConnection": "No connection",
         "ok": "OK"
     },
     "login": {
