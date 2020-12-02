@@ -18,6 +18,7 @@ export const styles = StyleSheet.create({
     },
     loadingContainer: {
         flex: 1,
+        backgroundColor: COLORS.lighterBlue,
     },
     searchInput: {
         marginBottom: 0,

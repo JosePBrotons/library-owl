@@ -12,6 +12,7 @@ Array [
     <View
       style={
         Object {
+          "backgroundColor": "rgba(235, 246, 251, 1)",
           "flex": 1,
         }
       }

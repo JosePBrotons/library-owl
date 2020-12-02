@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     },
     loadingContainer: {
         flex: 1,
+        backgroundColor: COLORS.white,
     },
     formContainer: {
         flex: 2,
