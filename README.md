@@ -10,7 +10,7 @@ Library's owl is an app that allows you to rent books from a virtual library wit
 
 Built using React Native, so it's available to use on both Android and iOS.
 
-Library's Owl app fetches the lyrics data from the following [API](https://owls-library.herokuapp.com/).
+Library's Owl app fetches the books data from the following [API](https://owls-library.herokuapp.com/).
 
 ## Preview
 
@@ -62,7 +62,7 @@ Please make sure you are using the required [tools](https://github.com/JosePBrot
 
 To start checking this project please proceed with the scripts bellow:
 
-$ git clone git@github.com:JosePBrotons/lyrics-hunter.git
+$ git clone git@github.com:JosePBrotons/library-owl.git
 
 $ yarn install
 
