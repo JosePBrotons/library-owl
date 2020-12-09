@@ -13,6 +13,9 @@ const events = {
     settings: {
         changeLanguage: 'LANGUAGE_CHANGE',
     },
+    error: {
+        appCrash: 'APP_CRASHED'
+    }
 };
 
 export default events;
