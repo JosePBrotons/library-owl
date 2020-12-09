@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React, { useEffect } from 'react';
 import Splash from 'rnative-splash';
 import { rentalsKey, userDataKey } from '../constants';
+import ErrorHandler from './../components/common/error';
 import { GET_RENTALS, RESTORE_TOKEN } from '../context/flux/types/behavior';
 import { tokenizerManager } from '../core/tokenizer';
 import { useAppContext } from '../hooks';
@@ -28,7 +29,7 @@ const restoreUserInfo = async (dispatch: any, getItem: any) => {
         animationType: Splash.animationType.scale,
         duration: 850,
         delay: 500,
-      });
+    });
 };
 
 const restoreRentals = async (rentalsStorage: any, dispatch: any) => {
@@ -47,7 +48,9 @@ const Router = () => {
     }, []);
     return (
         <NavigationContainer>
-            <Stack.Navigator>{renderStack(stack, Stack)}</Stack.Navigator>
+            <ErrorHandler>
+                <Stack.Navigator>{renderStack(stack, Stack)}</Stack.Navigator>
+            </ErrorHandler>
         </NavigationContainer>
     );
 };
