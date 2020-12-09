@@ -39,5 +39,9 @@
     },
     "rentals": {
         "empty": "No has rentado ningún libro aún"
+    },
+    "error": {
+        "title": "Algo falló",
+        "message": "Si esto sigue sucediendo contáctanos."
     }
 }
